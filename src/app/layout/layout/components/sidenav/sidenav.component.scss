@@ -1,0 +1,52 @@
+mat-toolbar, .mat-drawer-container{
+    background-color: #fff;
+}
+
+mat-sidenav{
+    width:250px;
+    border: none;
+    min-height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    text-align: center;
+}
+
+.brandLink{
+    text-decoration: none;
+    color: #ff5a5a;
+}
+
+.link{
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s linear;
+    margin-left: 10px;
+    &:hover{
+        color: #ff5a5a;
+    }
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+}
+
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sidenavContent{
+    min-height: 100vh;
+}
+
+.active{
+    color: #ff5a5a;
+}
+
+.footer{
+    margin-top: auto;
+}

@@ -1,0 +1,33 @@
+<h1 class="text-center my-5 accent">{{ isEdit ? "Edit recipe group" : "Add new recipe group" }}</h1>
+<div class="container mx-auto row justify-content-around">
+    <div class="col-12 col-lg-6 mb-2 p-2">
+        <form *ngIf="isReady" [formGroup]="form">
+            <div class="row">
+                <div class="col-12">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Desserts" formControlName="name">
+                        <mat-error *ngIf="form.get('name') as control">
+                            <ng-container *ngIf="control.hasError('required')">
+                                This field is required
+                            </ng-container>
+                            <ng-container *ngIf="control.hasError('minlength')">
+                                Minimum 3 characters
+                            </ng-container>
+                            <ng-container *ngIf="control.hasError('maxlength')">
+                                Maximum 50 characters
+                            </ng-container>
+                        </mat-error>
+                    </mat-form-field>
+                </div>                
+                <div class="col-12">
+                    <p><mark>*</mark> Required fields</p>
+                </div>
+                <div class="col">
+                    <button mat-raised-button class="btnAccent d-block mx-auto" [disabled]="form.invalid" (click)="send()">{{ isEdit ? "Edit" : "Add"}}</button>
+                    <div class="text-danger pt-3" *ngIf="errorMsg" [innerHTML]="errorMsg"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<ng-container *ngIf="isReady">
+    <div class="container mt-5">
+        <h1 class="text-center accent mb-4">{{recipe.title}}</h1>
+        <div class="row">
+            <div class="col-12 col-lg-6 col-xl-5 p-2">
+                <img src="{{imageDir}}{{ recipe.image }}" alt="{{ recipe.title }}" class="img-fluid rounded" />
+            </div>
+            <div class="col-12 col-lg-6 col-xl-5 p-2 ms-xl-5">
+                <app-favorite-button *ngIf="isLoggedIn" [recipeId]="recipe.id"></app-favorite-button>
+                <h3> <span class="secondary-text">Author:</span> {{recipe.author}}</h3>
+                <h3><span class="secondary-text">Prep time:</span> {{ recipe.prepTime }}</h3>
+                <h3><span class="secondary-text">Recipe group:</span> {{ recipe.category }}</h3>
+                <h3><span class="secondary-text">Posted on:</span> {{ recipe.createdAt | date }}</h3>
+                <mat-divider class="d-lg-none"></mat-divider>
+                <h3 class="secondary-text">Ingredients:</h3>
+                <ul>
+                    <li *ngFor="let ingredient of recipe.ingredients">
+                        {{ingredient}}
+                    </li>
+                </ul>
+            </div>
+            <mat-divider class="d-lg-none"></mat-divider>
+            <div class="col-12 col-lg-6 offset-lg-1 p-2">
+                <h3 class="secondary-text">Directions: </h3>
+                <ng-container *ngFor="let step of recipe.directions; let i = index">
+                    <p><span class="secondary-text fw-bold">Step {{ i+1 }}. </span>{{ step }}</p>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</ng-container>

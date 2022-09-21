@@ -1,0 +1,14 @@
+<h4>
+    <button mat-icon-button (click)="toggleFavorite()">
+
+        <mat-icon *ngIf="selected">
+          favorite
+        </mat-icon>
+      
+        <mat-icon *ngIf="!selected">
+          favorite_border
+        </mat-icon>
+      
+    </button>
+    <span class="accent">Add to favorites</span>
+</h4>

@@ -1,0 +1,42 @@
+<h1 class="text-center accent mt-4">{{username}}'s profile</h1>
+<button mat-raised-button class="btnAccent" routerLink="/recipes/recipe-form">Add new recipe</button>
+<div class="text-success pt-3" *ngIf="action">{{ action == "edited" ? "Recipe updated!" : "Recipe added!" }}</div>
+<h2 class="accent mt-1">My recipes</h2>
+<div class="col-12 col-xl-10 mx-auto min-vh-50">
+    <div class="container">
+        <div *ngIf="isReady" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+            <ng-container *ngIf="hasRecipes; else noRecipes">
+                <ng-container *ngFor="let recipe of usersRecipes | paginate : { itemsPerPage: 8, currentPage: p}">
+                    <app-recipe [isProfilePage]="true" [recipe]="recipe"></app-recipe>
+                </ng-container>
+            </ng-container>
+            <ng-template #noRecipes>
+                <div class="w-100"><h2 class="secondary-text">You don't have any recipes yet.</h2></div>
+            </ng-template>
+        </div>
+        <ng-container *ngIf="hasRecipes" >
+            <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+        </ng-container>
+    </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<h2 class="accent mt-3">My favorites</h2>
+<div class="col-12 col-xl-10 mx-auto min-vh-50">
+    <div class="container">
+        <div *ngIf="isReady" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+            <ng-container *ngIf="hasFavorites; else noRecipes">
+                <ng-container *ngFor="let recipe of favoriteRecipes | paginate : { itemsPerPage: 8, currentPage: p}">
+                    <app-recipe [recipe]="recipe"></app-recipe>
+                </ng-container>
+            </ng-container>
+            <ng-template #noRecipes>
+                <div class="w-100"><h2 class="secondary-text">You don't have any favorites.</h2></div>
+            </ng-template>
+        </div>
+        <ng-container *ngIf="hasFavorites" >
+            <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+        </ng-container>
+    </div>
+</div>

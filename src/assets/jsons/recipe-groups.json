@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "groupName": "Appetizers"
+    },
+    {
+        "id": 2,
+        "groupName": "Main dishes"
+    },
+    {
+        "id": 3,
+        "groupName": "Salads"
+    },
+    {
+        "id": 4,
+        "groupName": "Desserts"
+    },
+    {
+        "id": 5,
+        "groupName": "Pastries and bread"
+    },
+    {
+        "id": 6,
+        "groupName": "Drinks"
+    }
+]

@@ -1,0 +1,21 @@
+<h1 class="text-center my-5 accent">Messages</h1>
+<div *ngIf="isReady" class="container">
+    <div class="row my-3 justify-content-center">
+        <ng-container *ngIf="hasMessages; else noMessages">
+            <ng-container *ngFor="let m of messages">
+                <div class="col-8 border m-2 mx-auto">
+                    <h2>User message</h2>
+                    <p>Sent by: {{m.fullName}}</p>
+                    <p>Email: {{m.email}}</p>
+                    <p>Message: </p>
+                    <p>{{m.message}}</p>
+                    <p>Date received: {{m.createdAt | date}} </p>
+                </div>
+            </ng-container>
+        </ng-container>
+
+        <ng-template #noMessages>
+            <div class="mt-5 col-10 text-center alert alert-danger"><p>There are no messages to display.</p></div>
+        </ng-template>
+    </div>
+</div>

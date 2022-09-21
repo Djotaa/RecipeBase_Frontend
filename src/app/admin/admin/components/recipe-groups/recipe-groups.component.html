@@ -1,0 +1,28 @@
+<h1 class="text-center my-5 accent">Recipe groups</h1>
+<div class="container mx-auto">
+<div class="text-success pt-3" *ngIf="action">{{ action == "edited" ? "Recipe group updated!" : "Recipe group added!" }}</div>
+<button mat-raised-button class="btnAccent" routerLink="/admin/recipe-group-form">Add new recipe group</button>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Group name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let g of recipeGroups">
+                <tr>
+                    <td>{{g.name}}</td>
+                    <td>
+                        <button mat-raised-button class="btnAccent me-2" routerLink="/admin/recipe-group-form/{{g.id}}">Edit</button>
+                    </td>
+                    <td>
+                        <button mat-raised-button class="btnSecondary" (click)="deleteGroup(g.id)">Delete</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+      </table>
+</div>

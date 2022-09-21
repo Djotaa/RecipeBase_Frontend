@@ -1,0 +1,64 @@
+<mat-sidenav-container>
+    <mat-sidenav class="text-center p-2" #sidenav="matSidenav">
+        <div class="d-flex flex-column h-100">
+            <a routerLink="/recipes">
+                <img class="avatar" src="../../../../../assets/img/logo.png" />
+            </a>
+    
+            <h1>
+                <a routerLink="recipes" class="brandLink">Recipe Base</a>
+            </h1>
+            <p class="text-muted">Find inspirations for your meals, or post your recipes for everyone to enjoy..</p>
+    
+            <mat-divider></mat-divider>
+    
+            <div class="d-flex flex-column align-items-start">
+                <ng-container *ngFor="let link of menuLinks">
+                    <a routerLink="{{link.route}}" routerLinkActive="active" class="link mt-2">
+                        <span>{{link.title}}</span>
+                    </a>
+                </ng-container>
+            </div>
+    
+            
+            <mat-divider></mat-divider>        
+            
+            <div class="d-flex flex-column align-items-start">
+                <ng-container *ngIf="!authService.token">
+                    <a routerLink="/login" routerLinkActive="active" class="link mt-2">
+                        <span>Login</span>
+                    </a>
+                    <a routerLink="/register" routerLinkActive="active" class="link mt-2">
+                        <span>Register</span>
+                    </a>
+                </ng-container>
+    
+                <ng-container *ngIf="authService.token">
+                    <a routerLink="/profile" routerLinkActive="active" class="link mt-2">
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="link mt-2" (click)="$event.preventDefault; authService.logout()">
+                        <span>Logout</span>
+                    </a>
+                </ng-container>
+            </div>
+    
+    
+            <div class="footer">
+                <app-footer></app-footer>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="d-md-none sticky-top" [ngClass]="{'mat-elevation-z5' : !sidenav.opened}">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+                <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+            </button>
+            <h1><a routerLink="recipes" class="brandLink" [ngClass]="{'d-none' : sidenav.opened}">Recipe Base</a></h1>
+        </mat-toolbar>
+        <div class="sidenavContent p-1">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

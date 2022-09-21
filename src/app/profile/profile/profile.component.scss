@@ -1,0 +1,23 @@
+.my-pagination ::ng-deep .ngx-pagination {
+    .current {
+        background: #f5b955;
+        border-radius: 5px;
+    }
+
+    a {
+        border-radius: 5px;
+    }
+
+    button {
+        border-radius: 5px;
+    }
+}
+
+.my-pagination ::ng-deep .ngx-pagination a:hover,
+.ngx-pagination button:hover {
+    background: #f5b955;
+}
+
+.min-vh-50{
+    min-height: 50vh;
+}

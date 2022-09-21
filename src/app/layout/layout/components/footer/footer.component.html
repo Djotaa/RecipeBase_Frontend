@@ -1,0 +1,11 @@
+<footer>
+        <h5 class="accent">Follow us</h5>
+        <div class="d-flex justify-content-around">
+                <ng-container *ngFor="let link of links">
+                        <a href="{{link.route}}" target="_blank" [innerHTML]="link.title"></a>
+                </ng-container>
+        </div>
+        <div>
+                <p>&copy;Djordje Solomun 2022</p>
+        </div>
+</footer>

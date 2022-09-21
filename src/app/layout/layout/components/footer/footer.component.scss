@@ -1,0 +1,9 @@
+footer{
+    a{
+        color: black;
+        &:hover{
+            color: #f5b955;
+        }
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,629 @@
+[
+  {
+    "id": 1,
+    "name": "Traditional Mexican Guacamole",
+    "prepTime": "10 mins",
+    "groupId": 1,
+    "ingredients": [
+      "2 avocados, peeled and pitted",
+      "1 cup chopped tomatoes",
+      "1/4 cup chopped onion",
+      "1/4 cup chopped cilantro",
+      "2 tablespoons lemon juice",
+      "1 jalapeno pepper, seeded and minced (Optional)",
+      "salt and ground black pepper to taste"
+    ],
+    "instructions": "1.Mash avocados in a bowl until creamy. 2.Mix tomatoes, onion, cilantro, lemon juice, and jalapeno pepper into mashed avocado until well combined; season with salt and black pepper.",
+    "imagePath": "traditional_mexican_guacamole.jpg",
+    "createdAt": "6-2-2022"
+  },
+  {
+    "id": 2,
+    "name": "Fully Loaded Deviled Eggs",
+    "prepTime": "2 hrs 25 mins",
+    "groupId": 1,
+    "ingredients": [
+      "12 eggs",
+      "1 teaspoon vegetable oil",
+      "1 small onion, chopped",
+      "1/4 cup sour cream",
+      "2 tablespoons mayonnaise",
+      "1 tablespoon ranch dressing, or to taste",
+      "1 1/2 teaspoons Dijon mustard",
+      "1/2 teaspoon garlic powder",
+      "1/2 pinch onion powder",
+      "1/8 teaspoon lemon pepper seasoning",
+      "1 tablespoon bacon bits, or to taste",
+      "1 cup finely shredded sharp Cheddar cheese",
+      "¼ teaspoon paprika, or as needed"
+    ],
+    "instructions": "1. Place eggs into a large pot and cover with lightly salted water. Bring to a boil and reduce heat to medium; boil eggs for 10 to 12 minutes. Drain the boiling water and fill pot with cold water. After 2 to 3 minutes, pour off water and replace with more cold water. Repeat until eggs are fully chilled, 10 to 15 minutes. Peel eggs. 2. Heat vegetable oil in a small skillet over medium heat and cook and stir onion until translucent, about 5 minutes. Remove from heat and let cool. 3. Slice eggs in half lengthwise and scoop yolks into a bowl; transfer egg white halves to a plate. Mash egg yolks with a fork; stir in sour cream, mayonnaise, ranch dressing, Dijon mustard, garlic powder, onion powder, and lemon pepper seasoning until yolk mixture is smooth. Stir in sauteed onions, bacon bits and Cheddar cheese. 4.Generously fill egg halves with filling and sprinkle each deviled egg with paprika. Refrigerate until chilled before serving.",
+    "imagePath": "fully_loaded_deviled_eggs.jpg",
+    "createdAt": "5-1-2022"
+  },
+  {
+    "id": 3,
+    "name": "Caprese on a Stick",
+    "prepTime": "15 mins",
+    "groupId": 1,
+    "ingredients": [
+      "1 pint cherry tomatoes, halved",
+      "1 (.6 ounce) package fresh basil leaves",
+      "1 (16 ounce) package small fresh mozzarella balls",
+      "toothpicks",
+      "3 tablespoons olive oil",
+      "salt and pepper to taste"
+    ],
+    "instructions": "1. Thread a tomato half, a small piece of basil leaf, and a mozzarella ball onto toothpicks until all ingredients are used. Drizzle the olive oil over the tomato, cheese and basil, leaving the end of the toothpick clean. Sprinkle with salt and pepper. Serve immediately.",
+    "imagePath": "caprese_on_a_stick.jpg",
+    "createdAt": "5-3-2022"
+  },
+  {
+    "id": 4,
+    "name": "Fried Mozzarella Cheese Sticks",
+    "prepTime": "25 mins",
+    "groupId": 1,
+    "ingredients": [
+      "2 large eggs, beaten",
+      "1/4 cup water",
+      "1 1/2 cups Italian seasoned bread crumbs",
+      "1/2 teaspoon garlic salt",
+      "2/3 cup all-purpose flour",
+      "1/3 cup cornstarch",
+      "2 cups oil for frying, or as needed",
+      "1 (16 ounce) package mozzarella cheese sticks"
+    ],
+    "instructions": "1. Whisk water and eggs together in a small bowl. Mix bread crumbs and garlic salt together in a medium bowl. Blend flour and cornstarch together in a third bowl. 2. Heat oil to 365 degrees F (185 degrees C) in a large, heavy saucepan. 3. Dredge a mozzarella stick in flour; shake off excess. Dip into egg mixture. Lift up so excess egg drips back in the bowl. Press into bread crumbs to coat. Place breaded mozzarella stick on a plate or wire rack. Repeat with remaining mozzarella sticks. 4. Use a spider spoon or a pair of tongs to lower 3 to 4 mozzarella sticks into the hot oil. Fry until golden brown, about 30 seconds. Remove from heat and drain on paper towels. Repeat to fry remaining mozzarella sticks.",
+    "imagePath": "fried_mozzarela_cheese_sticks.jfif",
+    "createdAt": "4-2-2022"
+  },
+  {
+    "id": 5,
+    "name": "World's Best Lasagna",
+    "prepTime": "3 hrs 15 mins",
+    "groupId": 2,
+    "ingredients": [
+      "1 pound sweet Italian sausage",
+      "3/4 pound lean ground beef",
+      "1/2 cup minced onion",
+      "2 cloves garlic, crushed",
+      "1 (28 ounce) can crushed tomatoes",
+      "2 (6 ounce) cans tomato paste",
+      "2 (6.5 ounce) cans canned tomato sauce",
+      "1/2 cup water",
+      "2 tablespoons white sugar",
+      "1 1/2 teaspoons dried basil leaves",
+      "1/2 teaspoon fennel seeds",
+      "1 teaspoon Italian seasoning",
+      "1 1/2 teaspoons salt, divided, or to taste",
+      "1/4 teaspoon ground black pepper",
+      "4 tablespoons chopped fresh parsley",
+      "12 lasagna noodles",
+      "16 ounces ricotta cheese",
+      "1 egg",
+      "3/4 pound mozzarella cheese, sliced",
+      "3/4 cup grated Parmesan cheese"
+    ],
+    "instructions": "1. In a Dutch oven, cook sausage, ground beef, onion, and garlic over medium heat until well browned. Stir in crushed tomatoes, tomato paste, tomato sauce, and water. Season with sugar, basil, fennel seeds, Italian seasoning, 1 teaspoon salt, pepper, and 2 tablespoons parsley. Simmer, covered, for about 1 1/2 hours, stirring occasionally. 2. Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in boiling water for 8 to 10 minutes. Drain noodles, and rinse with cold water. In a mixing bowl, combine ricotta cheese with egg, remaining parsley, and 1/2 teaspoon salt. 3. Preheat oven to 375 degrees F (190 degrees C). 4. To assemble, spread 1 1/2 cups of meat sauce in the bottom of a 9x13-inch baking dish. Arrange 6 noodles lengthwise over meat sauce. Spread with one half of the ricotta cheese mixture. Top with a third of mozzarella cheese slices. Spoon 1 1/2 cups meat sauce over mozzarella, and sprinkle with 1/4 cup Parmesan cheese. Repeat layers, and top with remaining mozzarella and Parmesan cheese. Cover with foil: to prevent sticking, either spray foil with cooking spray, or make sure the foil does not touch the cheese. 5. Bake in preheated oven for 25 minutes. Remove foil, and bake an additional 25 minutes. Cool for 15 minutes before serving.",
+    "imagePath": "world's_best_lasagna.jfif",
+    "createdAt": "3-10-2022"
+  },
+  {
+    "id": 6,
+    "name": "Best Hamburger Ever",
+    "prepTime": "20 mins",
+    "groupId": 2,
+    "ingredients": [
+      "1 1/2 pounds lean ground beef",
+      "1/2 onion, finely chopped",
+      "1/2 cup shredded Colby Jack or Cheddar cheese",
+      "1 (1 ounce) envelope dry onion soup mix",
+      "1 egg",
+      "1 clove garlic, minced",
+      "1 tablespoon garlic powder",
+      "1 teaspoon soy sauce",
+      "1 teaspoon Worcestershire sauce",
+      "1 teaspoon dried parsley",
+      "1 teaspoon dried basil",
+      "1 teaspoon dried oregano",
+      "1/2 teaspoon crushed dried rosemary",
+      "salt and pepper to taste"
+    ],
+    "instructions": "1. Preheat a grill on high heat. 2. Mix together ground beef, onion, cheese, onion soup mix, egg, garlic, garlic powder, soy sauce, Worcestershire sauce, parsley, basil, oregano, rosemary, salt, and pepper in a large bowl. Use your hands to form 4 patties. 3.Cook patties on the preheated grill until well-done, about 5 minutes per side.",
+    "imagePath": "best_hamburger_ever.jfif",
+    "createdAt": "4-8-2022"
+  },
+  {
+    "id": 7,
+    "name": "Chicken Parmesan",
+    "prepTime": "45 mins",
+    "groupId": 2,
+    "ingredients": [
+      "4 skinless, boneless chicken breast halves",
+      "salt and freshly ground black pepper to taste",
+      "2 large eggs",
+      "1 cup panko bread crumbs, or more as needed",
+      "3/4 cup grated Parmesan cheese, divided",
+      "2 tablespoons all-purpose flour, or more if needed",
+      "1/2 cup olive oil for frying, or as needed",
+      "1/2 cup prepared tomato sauce",
+      "1/4 cup fresh mozzarella, cut into small cubes",
+      "1/4 cup chopped fresh basil",
+      "1/2 cup grated provolone cheese",
+      "2 teaspoons olive oil"
+    ],
+    "instructions": "1. Preheat an oven to 450 degrees F (230 degrees C). 2. Place chicken breasts between two sheets of heavy plastic (resealable freezer bags work well) on a solid, level surface. Firmly pound chicken with the smooth side of a meat mallet to a thickness of 1/2-inch. Season chicken thoroughly with salt and pepper. 3. Beat eggs in a shallow bowl and set aside. 4. Mix bread crumbs and 1/2 cup Parmesan cheese in a separate bowl, set aside. 5. Place flour in a sifter or strainer; sprinkle over chicken breasts, evenly coating both sides. 6. Dip a flour-coated chicken breast in beaten eggs. Transfer breast to the bread crumb mixture, pressing crumbs into both sides. Repeat for each breast. Let chicken rest for 10 to 15 minutes. 7. Heat 1/2 inch olive oil in a large skillet on medium-high heat until it begins to shimmer. Cook chicken in the hot oil until golden, about 2 minutes per side. The chicken will finish cooking in the oven. 8. Transfer chicken to a baking dish. Top each breast with 2 tablespoons tomato sauce. Layer each chicken breast with equal amounts of mozzarella cheese, fresh basil, and provolone cheese. Sprinkle remaining Parmesan over top and drizzle each with 1/2 teaspoon olive oil. 9.Bake in the preheated oven until cheese is browned and bubbly and chicken breasts are no longer pink in the center, 15 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).",
+    "imagePath": "chicken_parmesan.jfif",
+    "createdAt": "6-8-2022"
+  },
+  {
+    "id": 8,
+    "name": "Easy Meatloaf",
+    "prepTime": "1 hr 15 mins",
+    "groupId": 2,
+    "ingredients": [
+      "1 1/2 pounds ground beef",
+      "1 egg",
+      "1 onion, chopped",
+      "1 cup milk",
+      "1 cup dried bread crumbs",
+      "salt and pepper to taste",
+      "2 tablespoons brown sugar",
+      "2 tablespoons prepared mustard",
+      "1/3 cup ketchup"
+    ],
+    "instructions": "1. Preheat oven to 350 degrees F (175 degrees C). 2. In a large bowl, combine the beef, egg, onion, milk and bread OR cracker crumbs. Season with salt and pepper to taste and place in a lightly greased 9x5-inch loaf pan, or form into a loaf and place in a lightly greased 9x13-inch baking dish. 3. In a separate small bowl, combine the brown sugar, mustard and ketchup. Mix well and pour over the meatloaf. 4. Bake at 350 degrees F (175 degrees C) for 1 hour.",
+    "imagePath": "easy_meatloaf.jfif",
+    "createdAt": "2-16-2022"
+  },
+  {
+    "id": 9,
+    "name": "Easy Fried Rice",
+    "prepTime": "20 mins",
+    "groupId": 2,
+    "ingredients": [
+      "2/3 cup chopped baby carrots",
+      "1/2 cup frozen green peas",
+      "2 tablespoons vegetable oil",
+      "1 clove garlic, minced, or to taste (Optional)",
+      "2 large eggs",
+      "3 cups leftover cooked white rice",
+      "1 tablespoon soy sauce, or more to taste",
+      "2 teaspoons sesame oil, or to taste"
+    ],
+    "instructions": "1. Place carrots in a small saucepan and cover with water. Bring to a low boil and cook for 3 to 5 minutes. Stir in peas, then immediately drain in a colander. 2. Heat a wok over high heat. Pour in vegetable oil, then stir in carrots, peas, and garlic; cook for about 30 seconds. Add eggs; stir quickly to scramble eggs with vegetables. 3. Stir in cooked rice. Add soy sauce and toss rice to coat. Drizzle with sesame oil and toss again.",
+    "imagePath": "easy_fried_rice.jfif",
+    "createdAt": "6-9-2022"
+  },
+  {
+    "id": 10,
+    "name": "Indian Chicken Curry (Murgh Kari)",
+    "prepTime": "1 hr",
+    "groupId": 2,
+    "ingredients": [
+      "2 pounds skinless, boneless chicken breast halves",
+      "2 teaspoons salt",
+      "1/2 cup cooking oil",
+      "1 1/2 cups chopped onion",
+      "1 tablespoon minced garlic",
+      "1 1/2 teaspoons minced fresh ginger root",
+      "1 tablespoon curry powder",
+      "1 teaspoon ground cumin",
+      "1 teaspoon ground turmeric",
+      "1 teaspoon ground coriander",
+      "1 teaspoon cayenne pepper",
+      "1 tablespoon water",
+      "1 (15 ounce) can crushed tomatoes",
+      "1 cup plain yogurt",
+      "1 tablespoon chopped fresh cilantro",
+      "1 teaspoon salt",
+      "1/2 cup water",
+      "1 teaspoon garam masala",
+      "1 tablespoon chopped fresh cilantro",
+      "1 tablespoon fresh lemon juice"
+    ],
+    "instructions": "1. Sprinkle the chicken breasts with 2 teaspoons salt. 2. Heat oil in a large skillet over high heat; partially cook the chicken in the hot oil in batches until completely browned on all sides. Transfer browned chicken breasts to a plate and set aside. 3. Reduce the heat to medium and add onion, garlic, and ginger to the oil remaining in the skillet. Cook and stir until onion turns soft and translucent, 5 to 8 minutes. Stir curry powder, cumin, turmeric, coriander, cayenne, and 1 tablespoon of water into the onion mixture; allow to heat together for about 1 minute while stirring. Add tomatoes, yogurt, 1 tablespoon chopped cilantro, and 1 teaspoon salt to the mixture; stir to combine. 4. Return chicken breast to the skillet along with any juices on the plate. Pour in 1/2 cup water and bring to a boil, turning the chicken to coat with the sauce. Sprinkle garam masala and 1 tablespoon cilantro over the chicken. 5. Cover the skillet and simmer until chicken breasts are no longer pink in the center and the juices run clear, about 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C). Drizzle with lemon juice to serve.",
+    "imagePath": "indian_chicken_curry_(murgh_ kari).jfif",
+    "createdAt": "1-29-2022"
+  },
+  {
+    "id": 11,
+    "name": "Potato Salad",
+    "prepTime": "6 hrs 30 mins",
+    "groupId": 3,
+    "ingredients": [
+      "5 pounds red potatoes, chopped",
+      "3 cups mayonnaise",
+      "2 cups finely chopped pickles",
+      "5 hard-cooked eggs, chopped",
+      "1/2 cup chopped red onion",
+      "1/2 cup chopped celery",
+      "3 tablespoons prepared mustard",
+      "1 tablespoon apple cider vinegar",
+      "1 teaspoon salt, or to taste",
+      "1/2 teaspoon ground black pepper"
+    ],
+    "instructions": "1. Place potatoes into a large pot and cover with salted water; bring to a boil. Reduce heat to medium-low and simmer until tender, about 10 minutes. Drain. Return potatoes to empty pot to dry while you mix the dressing. Sprinkle with salt. 2. Stir mayonnaise, pickles, hard-cooked eggs, red onion, celery, mustard, cider vinegar, 1 teaspoon salt, and pepper together in a large bowl. Fold potatoes into the mayonnaise mixture. Allow to chill at least six hours, or overnight, before serving.",
+    "imagePath": "potato_salad.jfif",
+    "createdAt": "3-28-2022"
+  },
+  {
+    "id": 12,
+    "name": "Marinated Cucumber, Onion, and Tomato Salad",
+    "prepTime": "2 hrs 15 mins",
+    "groupId": 3,
+    "ingredients": [
+      "1 cup water",
+      "1/2 cup distilled white vinegar",
+      "1/4 cup vegetable oil",
+      "1/4 cup sugar",
+      "1 teaspoon salt, or to taste",
+      "1 teaspoon freshly ground black pepper, or to taste",
+      "3 cucumbers, peeled and sliced 1/4-inch thick",
+      "3 tomatoes, cut into wedges",
+      "1 onion, sliced and separated into rings"
+    ],
+    "instructions": "1. Whisk water, vinegar, oil, sugar, salt, and pepper together in a large bowl until smooth; add cucumbers, tomatoes, and onion and stir to coat. 2. Cover bowl with plastic wrap; refrigerate for at least 2 hours.",
+    "imagePath": "marinated_cucumber,_onion,_and_tomato_salad.jfif",
+    "createdAt": "4-9-2022"
+  },
+  {
+    "id": 13,
+    "name": "Awesome Pasta Salad",
+    "prepTime": "40 mins",
+    "groupId": 3,
+    "ingredients": [
+      "1 (16 ounce) package fusilli (spiral) pasta",
+      "3 cups cherry tomatoes, halved",
+      "1/2 pound provolone cheese, cubed",
+      "1/2 pound salami, cubed",
+      "1/4 pound sliced pepperoni, cut in half",
+      "1 large green bell pepper, cut into 1 inch pieces",
+      "1 (10 ounce) can black olives, drained",
+      "1 (4 ounce) jar pimentos, drained",
+      "1 (8 ounce) bottle Italian salad dressing"
+    ],
+    "instructions": "1. Bring a large pot of lightly salted water to a boil. Cook fusilli in the boiling water, stirring occasionally, until tender yet firm to the bite, about 12 minutes. Drain. 2. Combine fusilli with tomatoes, cheese, salami, pepperoni, green pepper, olives, and pimentos in a large bowl. Pour in salad dressing; toss to coat.",
+    "imagePath": "awesome_pasta_salad.jfif",
+    "createdAt": "5-25-2022"
+  },
+  {
+    "id": 14,
+    "name": "Mom's Cucumber Salad",
+    "prepTime": "15 mins",
+    "groupId": 3,
+    "ingredients": [
+      "1 cup mayonnaise",
+      "1/4 cup white sugar",
+      "4 teaspoons distilled white vinegar",
+      "1/2 teaspoon dried dill weed",
+      "1/2 teaspoon seasoned salt",
+      "4 medium cucumbers, peeled and sliced"
+    ],
+    "instructions": "1. In a large bowl, stir together the mayonnaise, sugar, vinegar, dill, and seasoned salt. Mix in the cucumber slices, tossing to coat.",
+    "imagePath": "mom's_cucumber_salad.png",
+    "createdAt": "2-15-2022"
+  },
+  {
+    "id": 15,
+    "name": "Best Brownies",
+    "prepTime": "45 mins",
+    "groupId": 4,
+    "ingredients": [
+      "1/2 cup butter",
+      "1 cup white sugar",
+      "2 eggs",
+      "1 teaspoon vanilla extract",
+      "1/3 cup unsweetened cocoa powder",
+      "1/2 cup all-purpose flour",
+      "1/4 teaspoon salt",
+      "1/4 teaspoon baking powder"
+    ],
+    "instructions": "1. Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square pan. 2.In a large saucepan, melt 1/2 cup butter. Remove from heat, and stir in sugar, eggs, and 1 teaspoon vanilla. Beat in 1/3 cup cocoa, 1/2 cup flour, salt, and baking powder. Spread batter into prepared pan. 3. Bake in preheated oven for 25 to 30 minutes. Do not overcook. 4. Remove brownies from the oven, and make frosting. Combine 3 tablespoons softened butter, 3 tablespoons cocoa, honey, 1 teaspoon vanilla extract, and 1 cup confectioners' sugar. Stir until smooth. 5. Frost brownies while they are still warm.",
+    "imagePath": "best_brownies.jfif",
+    "createdAt": "1-1-2022"
+  },
+  {
+    "id": 16,
+    "name": "Best Chocolate Chip Cookies",
+    "prepTime": "1 hr",
+    "groupId": 4,
+    "ingredients": [
+      "1 cup butter, softened",
+      "1 cup white sugar",
+      "1 cup packed brown sugar",
+      "2 eggs",
+      "2 teaspoons vanilla extract",
+      "1 teaspoon baking soda",
+      "2 teaspoons hot water",
+      "1/2 teaspoon salt",
+      "3 cups all-purpose flour",
+      "2 cups semisweet chocolate chips",
+      "1 cup chopped walnuts"
+    ],
+    "instructions": "1. Preheat oven to 350 degrees F (175 degrees C). 2. Cream together the butter, white sugar, and brown sugar until smooth. Beat in the eggs one at a time, then stir in the vanilla. Dissolve baking soda in hot water. Add to batter along with salt. Stir in flour, chocolate chips, and nuts. Drop by large spoonfuls onto ungreased pans. 3. Bake for about 10 minutes in the preheated oven, or until edges are nicely browned.",
+    "imagePath": "best_chocolate_chip_cookies.jfif",
+    "createdAt": "3-20-2022"
+  },
+  {
+    "id": 17,
+    "name": "Edible Cookie Dough",
+    "prepTime": "10 mins",
+    "groupId": 4,
+    "ingredients": [
+      "3/4 cup packed brown sugar",
+      "1/2 cup butter",
+      "1 teaspoon vanilla extract",
+      "1/2 teaspoon salt",
+      "1 cup all-purpose flour",
+      "2 tablespoons milk",
+      "1/2 cup milk chocolate chips",
+      "1/2 cup mini chocolate chips"
+    ],
+    "instructions": "1. Combine brown sugar and butter in a large bowl; beat with an electric mixer until creamy. Beat in vanilla extract and salt. Add flour; mix until a crumbly dough forms. Mix in milk. Fold in milk chocolate chips and mini chocolate chips.",
+    "imagePath": "edible_cookie_dough.jfif",
+    "createdAt": "6-1-2022"
+  },
+  {
+    "id": 18,
+    "name": "The Best Lemon Bars",
+    "prepTime": "55 mins",
+    "groupId": 4,
+    "ingredients": [
+      "1 cup butter, softened",
+      "½ cup white sugar",
+      "2 cups all-purpose flour",
+      "4 eggs",
+      "1 1/2cups white sugar",
+      "1/4 cup all-purpose flour",
+      "2 lemons, juiced"
+    ],
+    "instructions": "1. Preheat oven to 350 degrees F (175 degrees C). 2.In a medium bowl, blend together softened butter, 2 cups flour and 1/2 cup sugar. Press into the bottom of an ungreased 9x13 inch pan. 3. Bake for 15 to 20 minutes in the preheated oven, or until firm and golden. In another bowl, whisk together the remaining 1 1/2 cups sugar and 1/4 cup flour. Whisk in the eggs and lemon juice. Pour over the baked crust. 4. Bake for an additional 20 minutes in the preheated oven. The bars will firm up as they cool. For a festive tray, make another pan using limes instead of lemons and adding a drop of green food coloring to give a very pale green. After both pans have cooled, cut into uniform 2 inch squares and arrange in a checker board fashion.",
+    "imagePath": "the_best_lemon_bars.jfif",
+    "createdAt": "1-26-2022"
+  },
+  {
+    "id": 19,
+    "name": "How to Make Vanilla Ice Cream",
+    "prepTime": "2 hrs 35 mins",
+    "groupId": 4,
+    "ingredients": [
+      "3/4 cup white sugar",
+      "1 cup heavy whipping cream",
+      "2 1/4 cups milk",
+      "2 teaspoons vanilla extract"
+    ],
+    "instructions": "1. Stir sugar, cream, and milk into a saucepan over low heat until sugar has dissolved. Heat just until mix is hot and a small ring of foam appears around the edge. 2. Transfer cream mixture to a pourable container such as a large measuring cup. Stir in vanilla extract and chill mix thoroughly, at least 2 hours. (Overnight is best.) 3. Pour cold ice cream mix into an ice cream maker, turn on the machine, and churn according to manufacturer's directions, 20 to 25 minutes. 4. When ice cream is softly frozen, serve immediately or place a piece of plastic wrap directly on the ice cream and place in freezer to ripen, 2 to 3 hours.",
+    "imagePath": "how_to_make_vanilla_ice_cream.png",
+    "createdAt": "4-7-2022"
+  },
+  {
+    "id": 20,
+    "name": "Old-Fashioned Lemonade",
+    "prepTime": "10 mins",
+    "groupId": 6,
+    "ingredients": [
+      "6 lemons",
+      "1 cup white sugar",
+      "6 cups water, or more as needed"
+    ],
+    "instructions": "1. Juice lemons; you should have 1 cup juice. 2. Combine juice, sugar, and water in a 1/2-gallon pitcher. Stir until sugar dissolves. Taste and add more water if desired. 3. Chill and serve over ice.",
+    "imagePath": "old-fashioned_lemonade.jfif",
+    "createdAt": "2-1-2022"
+  },
+  {
+    "id": 21,
+    "name": "Parker's Famous Margaritas",
+    "prepTime": "5 mins ",
+    "groupId": 6,
+    "ingredients": [
+      "5 fluid ounces tequila",
+      "3 fluid ounces fresh lime juice ",
+      "1 fluid ounce sweetened lime juice ",
+      "3 fluid ounces triple sec (orange-flavored liqueur)",
+      "ice cubes",
+      "1 lime, cut into wedges",
+      "rimming salt"
+    ],
+    "instructions": "1. Measure the tequila, lime juice, sweetened lime juice and triple sec into a cocktail shaker and add a generous scoop of ice. Cover and shake until the shaker is frosty, about 30 seconds. 2. Rub a lime wedge around the rim of a margarita glass and dip in salt. Fill each glass with ice. Strain equal amounts of the cocktail into the glasses to serve. Garnish with a lime wedge.",
+    "imagePath": "parker's_famous_margaritas.jpg",
+    "createdAt": "1-5-2022"
+  },
+  {
+    "id": 22,
+    "name": "Best Strawberry Daiquiri",
+    "prepTime": "10 mins",
+    "groupId": 6,
+    "ingredients": [
+      "6 cups ice",
+      "1/2 cup white sugar",
+      "4 ounces frozen strawberries",
+      "1/8 cup lime juice",
+      "1/2 cup lemon juice",
+      "3/4 cup rum",
+      "1/4 cup lemon-lime flavored carbonated beverage"
+    ],
+    "instructions": "1. In a blender, combine ice, sugar and strawberries. Pour in lime juice, lemon juice, rum and lemon-lime soda. Blend until smooth. Pour into glasses and serve.",
+    "imagePath": "best_strawberry_daiquiri.jfif",
+    "createdAt": "1-8-2022"
+  },
+  {
+    "id": 23,
+    "name": "Strawberry Mojito",
+    "prepTime": "15 mins",
+    "groupId": 6,
+    "ingredients": [
+      "white sugar, for rimming",
+      "2 large limes, quartered",
+      "1/2 bunch mint leaves",
+      "7 strawberries, quartered",
+      "1 cup white sugar",
+      "1 cup white rum",
+      "2 cups club soda",
+      "8 cups ice cubes"
+    ],
+    "instructions": "1. Pour 1/4 to 1/2 inch of sugar onto a small, shallow plate. Run one of the lime quarters around the rim of each cocktail glass, then dip the glasses into the sugar to rim; set aside. 2. Squeeze all of the lime quarters into a sturdy glass pitcher. Toss the juiced limes into the pitcher along with the mint, strawberries, and 1 cup of sugar. Crush the fruits together with a muddler to release the juices from the strawberries and the oil from the mint leaves. Stir in the rum and club soda until the sugar has dissolved. Pour into the sugared glasses over ice cubes to serve.",
+    "imagePath": "strawberry_mojito.jpg",
+    "createdAt": "1-7-2022"
+  },
+  {
+    "id": 24,
+    "name": "Classic Old Fashioned",
+    "prepTime": "10 mins",
+    "groupId": 6,
+    "ingredients": [
+      "2 teaspoons simple syrup",
+      "1 teaspoon water",
+      "2 dashes bitters",
+      "1 cup ice cubes",
+      "1 (1.5 fluid ounce) jigger bourbon whiskey",
+      "1 slice orange",
+      "1 maraschino cherry"
+    ],
+    "instructions": "1. Pour the simple syrup, water, and bitters into a whiskey glass. Stir to combine, then place the ice cubes in the glass. Pour bourbon over the ice and garnish with the orange slice and maraschino cherry.",
+    "imagePath": "classic_old_fashioned.jfif",
+    "createdAt": "1-9-2022"
+  },
+  {
+    "id": 25,
+    "name": "Classic Bloody Mary",
+    "prepTime": "2 mins",
+    "groupId": 6,
+    "ingredients": [
+      "1 teaspoon sea salt, or as needed",
+      "ice cubes, as needed",
+      "3/4 cup spicy tomato-vegetable juice cocktail (such as V8®)",
+      "1 (1.5 fluid ounce) jigger vodka",
+      "2 dashes Worcestershire sauce",
+      "1 dash hot pepper sauce (such as Tabasco®)",
+      "salt and ground black pepper to taste",
+      "1 stalk celery",
+      "2 garlic-stuffed green olives, threaded onto a toothpick"
+    ],
+    "instructions": "1. Pour salt onto a small plate. Moisten the rim of a glass and press into the salt. Fill the glass with ice cubes. 2. Fill a cocktail shaker with ice cubes; add vegetable juice cocktail, vodka, Worcestershire sauce, hot pepper sauce, salt, and pepper. Cover and shake until the outside of shaker has frosted, about 20 seconds. 3. Strain Bloody Mary into the prepared glass and garnish with celery stalk and olives.",
+    "imagePath": "classic_bloody_mary.jfif",
+    "createdAt": "1-30-2022"
+  },
+  {
+    "id": 26,
+    "name": "Naan",
+    "prepTime": "2 hrs 30 mins",
+    "groupId": 5,
+    "ingredients": [
+      "1 (.25 ounce) package active dry yeast",
+      "1 cup warm water",
+      "1/4 cup white sugar",
+      "3 tablespoons milk",
+      "1 large egg, beaten",
+      "2 teaspoons salt",
+      "4 1/2 cups bread flour",
+      "2 teaspoons minced garlic (Optional)",
+      "1/4 cup butter, melted"
+    ],
+    "instructions": "1. Dissolve yeast in warm water in a large bowl. Let stand about 10 minutes, until frothy. 2. Meanwhile, generously oil a large bowl. 3. Stir sugar, milk, egg, and salt into the yeast mixture. Mix in enough flour to make a soft dough. 4. Knead dough on a lightly floured surface until smooth, 6 to 8 minutes. 5. Place dough in the prepared oil, cover with a damp cloth, and let rise until doubled in size, about 1 hour. 6. Punch down dough on a lightly floured surface, and knead in garlic. Pinch off small handfuls of dough about the size of a golf ball; you should have about 14. Roll each piece into a ball and place on a tray. Cover with a towel, and allow to rise until doubled in size, about 30 minutes. 7. Meanwhile, preheat a large grill pan over high heat. 8. Roll each piece of dough into a thin circle. 9. Brush some melted butter on the preheated grill pan. Place a few pieces of dough in the pan (as many as you can fit) and cook until puffy and lightly browned, 2 to 3 minutes. Brush butter onto the uncooked sides, flip, and cook until browned, 2 to 4 more minutes. Remove from the grill and repeat to cook the remaining naan.",
+    "imagePath": "naan.jfif",
+    "createdAt": "1-9-2022"
+  },
+  {
+    "id": 27,
+    "name": "Belle's Hamburger Buns",
+    "prepTime": "2 hrs 20 mins",
+    "groupId": 5,
+    "ingredients": [
+      "1 cup milk",
+      "1 cup water",
+      "2 tablespoons butter",
+      "1 tablespoon white sugar",
+      "1 1/2 teaspoons salt",
+      "5 1/2 cups all-purpose flour",
+      "1 (.25 ounce) envelope active dry yeast",
+      "1 egg yolk",
+      "1 tablespoon water"
+    ],
+    "instructions": "1. Combine the milk, 1 cup of water, butter, sugar and salt in a saucepan. Bring to a boil then remove from the heat and let stand until lukewarm. If the mixture is too hot, it will kill the yeast. 2. In a large bowl, stir together the flour and yeast. Pour in wet ingredients and stir until the dough starts to pull together. If you have a stand mixer, use the dough hook to mix for about 8 minutes. If not, knead the dough on a floured surface for about 10 minutes. Place the dough in a greased bowl, turning to coat. Cover and let stand until doubled in size, about 1 hour. 3. Punch down the dough and divide into 12 portions They should be a little larger than a golf ball. Make tight balls out of the dough by pulling the dough tightly around and pinching it at the bottom. Place on a baking sheet lined with parchment paper or aluminum foil. After the rolls sit for a minute and relax, flatten each ball with the palm of your hand until it is 3 to 4 inches wide. You may want to oil your hand first. Set rolls aside until they double in size, about 20 minutes. 4. Preheat the oven to 400 degrees F (200 degrees C). Mix together the egg yolk and 1 tablespoon of water in a cup or small bowl. Brush onto the tops of the rolls. Position 2 oven racks so they are not too close to the top or bottom of the oven. 5. Bake for 10 minutes in the preheated oven. Remove the rolls from the oven and return them to different shelves so each one spends a little time on the top. Continue to bake for another 5 to 10 minutes, or until nicely browned on the top and bottom.",
+    "imagePath": "belle's_hamburger_buns.jfif",
+    "createdAt": "1-31-2022"
+  },
+  {
+    "id": 28,
+    "name": "Banana Chocolate Chip Bread",
+    "prepTime": "1 hr 25 mins",
+    "groupId": 5,
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1 teaspoon baking powder",
+      "1 teaspoon baking soda",
+      "1 teaspoon salt",
+      "3 ripe bananas, mashed",
+      "1 tablespoon milk",
+      "1 teaspoon ground cinnamon, or to taste",
+      "1/2 cup butter, softened",
+      "1 cup white sugar",
+      "2 eggs",
+      "1 cup semisweet chocolate chips"
+    ],
+    "instructions": "1. Preheat oven to 325 degrees F (165 degrees C). Grease a 9x5-inch loaf pan, preferably glass. 2. Mix flour, baking powder, baking soda, and salt in a bowl. Stir bananas, milk, and cinnamon in another bowl. Beat butter and sugar in a third bowl until light and fluffy. Add eggs to butter mixture, one at a time, beating well after each addition. Stir banana mixture into butter mixture. Stir in dry mixture until blended. Fold in chocolate chips until just combined. Pour batter into prepared loaf pan. 3. Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 70 minutes. Cool in the pan for 10 minutes before removing to cool completely on a wire rack before slicing.",
+    "imagePath": "banana_chocolate_chip_bread.jfif",
+    "createdAt": "1-10-2022"
+  },
+  {
+    "id": 29,
+    "name": "Simple Whole Wheat Bread",
+    "prepTime": "2 hrs 50 mins",
+    "groupId": 5,
+    "ingredients": [
+      "3 cups warm water (110 degrees F/45 degrees C)",
+      "2 (.25 ounce) packages active dry yeast",
+      "2/3 cup honey, divided",
+      "5 cups bread flour",
+      "5 tablespoons butter, melted, divided",
+      "1 tablespoon salt",
+      "4 cups whole wheat flour, or more as needed"
+    ],
+    "instructions": "1. Mix warm water, yeast, and 1/3 cup honey in a large bowl to dissolve. Add 5 cups bread flour, and stir to combine. Let sit for 30 minutes, or until big and bubbly. 2. Mix in 3 tablespoons melted butter, remaining 1/3 cup honey, and salt. Stir in 2 cups whole wheat flour. Transfer dough to a floured work surface and gradually knead in remaining 2 cups whole wheat flour. Knead until dough starts to pull away from the work surface, adding more whole wheat flour if necessary; dough should be a bit tacky to the touch, but not too sticky. 3. Place in a greased bowl, turning once to coat the surface of the dough. Cover with a dish towel and let rise in a warm place until doubled, 45 minutes to 1 hour. 4. Grease three 9x5-inch loaf pans. Punch down the dough, and divide it into 3 loaves. Place in the prepared loaf pans, and allow to rise until dough has topped the pans by one inch, another 45 minutes to 1 hour. 5. Meanwhile, preheat the oven to 350 degrees F (175 degrees C). 6. Bake the risen loaves in the preheated oven until golden brown for 25 to 30 minutes, do not overbake. 7. Lightly brush the tops of the loaves with remaining 2 tablespoons melted butter when done to prevent crust from getting hard. Cool completely.",
+    "imagePath": "simple_whole_wheat_bread.jfif",
+    "createdAt": "1-11-2022"
+  },
+  {
+    "id": 30,
+    "name": "Brioche",
+    "prepTime": "1 day 3 hrs 20 mins",
+    "groupId": 5,
+    "ingredients": [
+      "1 tablespoon active dry yeast",
+      "1/3 cup warm water (110 degrees F)",
+      "3 1/2 cups all-purpose flour",
+      "1 tablespoon white sugar",
+      "1 teaspoon salt",
+      "4 eggs",
+      "1 cup butter, softened",
+      "1 egg yolk",
+      "1 teaspoon cold water"
+    ],
+    "instructions": "1. In a small bowl, dissolve yeast in warm water. Let stand until creamy, about 10 minutes. 2. In a large bowl, stir together the flour sugar and salt. Make a well in center of the bowl and mix in the eggs and yeast mixture. Beat well until the dough has pulled together, then turn it out onto a lightly floured surface and knead until smooth and supple, about 8 minutes. 3. Flatten the dough and spread it with one third of the butter. Knead this well. Repeat this twice to incorporate the remaining butter. Allow the dough to rest for a few minutes between additions of butter. This process may take 20 minutes or so. Lightly oil a large bowl, place the dough in the bowl and turn to coat with oil. Cover with plastic wrap and let rise in a warm place until doubled in volume, about 1 hour. 4. Deflate the dough, cover with plastic wrap, and refrigerate 6 hours or overnight. It needs time to chill in order to become more workable. 5. Turn the dough out onto a lightly floured surface. Divide the dough into two equal pieces, form into loaves and place into prepared pans. Cover with greased plastic wrap and let rise until doubled in volume, about 60 minutes.Turn the dough out onto a lightly floured surface. Divide the dough into two equal pieces, form into loaves and place into prepared pans. Cover with greased plastic wrap and let rise until doubled in volume, about 60 minutes. 6. Preheat oven to 400 degrees F (200 degrees C). Lightly grease two 9x5-inch loaf pans (see Cook's Note to make rolls). Beat the egg yolk with 1 teaspoon of water to make a glaze. 7. Brush the loaves or rolls with the egg wash. Bake in preheated oven until a deep golden brown. Start checking the loaves for doneness after 25 minutes, and rolls at 10 minutes. Let the loaves cool in the pans for 10 minutes before moving them to wire racks to cool completely.",
+    "imagePath": "brioche.jfif",
+    "createdAt": "1-13-2022"
+  },
+  {
+    "id": 31,
+    "name": "Traditional Layered French Croissants",
+    "prepTime": "1 day 6 hrs 45 mins",
+    "groupId": 5,
+    "ingredients": [
+      "2 tablespoons all-purpose flour",
+      "1 1/2 cups unsalted butter, at room temperature",
+      "4 cups all-purpose flour, divided",
+      "1/2 teaspoon salt",
+      "3 tablespoons sugar",
+      "2 (.25 ounce) packages active dry yeast",
+      "1/4 cup lukewarm water",
+      "1 cup milk",
+      "1/2 cup heavy cream",
+      "1 egg",
+      "1 tablespoon water"
+    ],
+    "instructions": "1. Sprinkle 2 tablespoons of flour over the butter and mix it together with your hands in a mixing bowl or on a work surface. Transfer the butter to a length of foil or parchment paper and pat it into a 6 inch square. Fold up the foil to make a packet and refrigerate until chilled, about 2 hours. 2. Combine 2 cups of the flour with the salt and sugar in a mixing bowl. Dissolve the yeast in the lukewarm water (100 degrees F/38 degrees C) and set aside until frothy, about 10 minutes. Meanwhile, warm the milk and the heavy cream to lukewarm. Add the yeast, milk, and cream to the flour mixture and stir well. The dough will have a batter-like consistency. 3. Stir in the remaining 2 cups of flour 1/4 cup at a time to form a soft dough. It should no longer be sticky. Turn the dough onto a lightly floured work surface and knead until smooth, about 5 minutes. Place the dough in a mixing bowl and cover with plastic wrap. Refrigerate for 1 hour. 4. To begin the rolling and folding process, both the butter and the dough should be at a cool room temperature. [See Cook's Note.] Place the dough on a floured surface and roll it into a 10-inch square. Set the block of butter diagonally on the square dough. Bring each point of dough to the center of the butter square; the edges of the dough should overlap. Pinch the edges together to seal. 5. Starting from the center of the square and working outward, use a rolling pin to roll the dough out into a rectangle. The butter should be pliable enough to roll smoothly with the dough; if it's too soft and starts to ooze out the corners, wrap the dough in plastic and refrigerate before proceeding. Roll the dough into a long rectangle, approximately 8 by 18 inches. Fold the length of dough into thirds, like a business letter. 6. If the dough is still cool, you can continue with another fold. Otherwise, wrap it in plastic and refrigerate for 45 minutes to 1 hour. Remove the dough from the refrigerator and let it warm up for about 10 minutes before you begin rolling it out again. 7. Position the dough so that the open ends are at 12 and 6 o'clock. Roll the dough into a rectangle, working from the center of the dough and pressing outwards. Reposition the dough as necessary to fit your work space. You should have a long rectangle for the 'book fold.' Fold both ends of the dough into the middle; the ends don't have to be touching, but should be close. Fold the already-folded dough in half; it will look like a thick book. Wrap the dough well with plastic and refrigerate for 1 to 2 hours. 8. Remove the dough from the refrigerator and let it rest at room temperature for about 20 minutes. Roll the dough into a rectangle again and fold it into thirds, like a business letter. Wrap it in plastic and refrigerate for 4-6 hours or overnight. 9. To shape the croissants, roll the dough into a 10- by 38-inch rectangle on a lightly floured work surface. It should be about 1/4 inch thick. Use a pizza wheel or sharp paring knife to trim the edges of the dough. Divide the rectangle in half so that you have two 5-inch wide strips of dough. Use a clean yardstick to mark each strip into triangles that are 5 inches wide at their bases. Cut the triangles and place them onto parchment-lined baking sheets. Chill for 15 to 20 minutes, if necessary. 10. Starting at the base of the triangle, roll the dough up into a log; the tip of the triangle should be under the body of the croissant to prevent it from unraveling. Bend in the corners to form the traditional crescent shape. Repeat with the remaining dough. 11. Arrange the croissants on the parchment-lined baking sheets and allow to rise until doubled in size, about 1 to 2 hours. 12. Preheat an oven to 425 degrees F (220 degrees C). Beat the egg with the tablespoon of water to make the egg wash. Brush the croissants with egg wash and bake in the preheated oven until deep brown, 22 to 25 minutes. Cool on a rack before serving.",
+    "imagePath": "traditional_layered_french_croissant.jpg",
+    "createdAt": "1-14-2022"
+  }
+]

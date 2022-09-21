@@ -1,0 +1,60 @@
+.my-pagination ::ng-deep .ngx-pagination {
+    .current {
+        background: #f5b955;
+        border-radius: 5px;
+    }
+
+    a {
+        border-radius: 5px;
+    }
+
+    button {
+        border-radius: 5px;
+    }
+}
+
+.my-pagination ::ng-deep .ngx-pagination a:hover,
+.ngx-pagination button:hover {
+    background: #f5b955;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .checkboxes {
+        .col {
+            width: fit-content;
+        }
+    
+    }
+}
+
+::ng-deep.mat-focused .mat-form-field-label {
+    color: #f5b955 !important;
+}
+
+::ng-deep.mat-form-field-underline {
+
+    background-color: #f5b955 !important;
+}
+
+::ng-deep .mat-form-field:not(.mat-form-field-invalid) .mat-form-field-ripple {
+    background-color: #f5b955 !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent {
+    .mat-checkbox-ripple .mat-ripple-element {
+        background-color: #f5b955 !important;
+    }
+
+    .mat-checkbox-background,
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+        background-color: #f5b955;
+    }
+}
+
+::ng-deep .mat-checkbox.mat-accent {
+    .mat-checkbox-ripple .mat-ripple-element {
+        background-color: #f5b955 !important;
+    }
+}
