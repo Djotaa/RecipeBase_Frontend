@@ -4,6 +4,8 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { SpinnerFunctions } from './shared/classes/spinner-functions';
 
+import { PrimeNGConfig } from 'primeng/api';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,7 +16,8 @@ export class AppComponent {
   constructor(
     private titleService: Title,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private primengConfig: PrimeNGConfig
   ){}
 
   ngOnInit(){
@@ -22,6 +25,7 @@ export class AppComponent {
   }
 
   dynamicChangingTitle(){
+    this.primengConfig.ripple = true;
     const appTitle = this.titleService.getTitle();
     this.router
       .events.pipe(

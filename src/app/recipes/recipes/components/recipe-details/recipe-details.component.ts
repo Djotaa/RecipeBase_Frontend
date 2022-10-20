@@ -28,13 +28,12 @@ export class RecipeDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoggedIn = !!localStorage.getItem("token");
-    console.log(this.isLoggedIn)
     SpinnerFunctions.showSpinner();
 
     let id = this.activatedRoute.snapshot.params["id"];
 
     this.recipeApiService.get(id).subscribe({
-      next: data => {
+      next: (data:any) => {
         this.recipe=data;
         SpinnerFunctions.hideSpinner();
 
@@ -47,7 +46,7 @@ export class RecipeDetailsComponent implements OnInit {
         
         this.isReady = true;
       },
-      error: err => {
+      error: (err:any) => {
         console.log(err)
         if(err.status == 404){
           SpinnerFunctions.hideSpinner();

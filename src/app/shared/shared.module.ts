@@ -7,6 +7,15 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { RecipeComponent } from './components/recipe/recipe.component';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { ToolbarModule } from 'primeng/toolbar';
+import {InputTextModule} from 'primeng/inputtext';
+import {DialogModule} from 'primeng/dialog';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 
 
@@ -22,7 +31,16 @@ import { MaterialModule } from '../material/material.module';
     ReactiveFormsModule,
     NgxPaginationModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    TableModule,
+    ButtonModule,
+    ToastModule,
+    ToolbarModule,
+    InputTextModule,
+    DialogModule,
+    InputNumberModule,
+    ConfirmDialogModule,
+    InputTextareaModule
   ],
   exports: [
     HttpClientModule,
@@ -30,7 +48,16 @@ import { MaterialModule } from '../material/material.module';
     FormsModule,
     NgxPaginationModule,
     ReactiveFormsModule,
-    RecipeComponent
+    RecipeComponent,
+    TableModule,
+    ButtonModule,
+    ToastModule,
+    ToolbarModule,
+    InputTextModule,
+    DialogModule,
+    InputNumberModule,
+    ConfirmDialogModule,
+    InputTextareaModule
   ]
 })
 export class SharedModule { }

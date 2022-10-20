@@ -9,6 +9,17 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { FavoriteButtonComponent } from './recipes/components/favorite-button/favorite-button.component';
 import { AddRecipeFormComponent } from './recipes/components/add-recipe-form/add-recipe-form.component';
 
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { ToolbarModule } from 'primeng/toolbar';
+import {InputTextModule} from 'primeng/inputtext';
+import {DialogModule} from 'primeng/dialog';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import { RippleModule } from 'primeng/ripple';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +32,17 @@ import { AddRecipeFormComponent } from './recipes/components/add-recipe-form/add
     CommonModule,
     RecipesRoutingModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    TableModule,
+    ButtonModule,
+    ToastModule,
+    ToolbarModule,
+    InputTextModule,
+    DialogModule,
+    InputNumberModule,
+    ConfirmDialogModule,
+    InputTextareaModule,
+    RippleModule
   ]
 })
 export class RecipesModule { }

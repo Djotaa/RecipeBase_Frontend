@@ -35,10 +35,10 @@ export class RecipesComponent implements OnInit {
       "recipes": this.recipesApiService.getAll(),
       "recipeGroups": this.recipeGroupApiService.getAll()
     }).subscribe({
-      next: data =>{
+      next: (data:any) =>{
         this.recipes = data.recipes;
         this.recipeGroups = data.recipeGroups;
-        this.filterFormService.form.setControl("recipeGroup", new UntypedFormArray(data.recipeGroups.map(x=>new UntypedFormControl())));
+        this.filterFormService.form.setControl("recipeGroup", new UntypedFormArray(data.recipeGroups.map((x:any)=>new UntypedFormControl())));
         this.filterRecipes();
 
         this.filterFormService.form.valueChanges.subscribe({

@@ -5,11 +5,13 @@ import { forkJoin } from 'rxjs';
 import { UserRecipesService } from './services/user-recipes.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { SpinnerFunctions } from 'src/app/shared/classes/spinner-functions';
+import { MessageService } from 'primeng/api'
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
+  providers: [MessageService]
 })
 export class ProfileComponent implements OnInit {
 
@@ -17,7 +19,8 @@ export class ProfileComponent implements OnInit {
   usersRecipes: IRecipeBlock[];
   username: string;
   isReady: boolean = false;
-  p: number = 1;
+  p1: number = 1;
+  p2: number = 1;
   hasFavorites: boolean;
   hasRecipes: boolean;
   action: any;
@@ -25,7 +28,8 @@ export class ProfileComponent implements OnInit {
   constructor(
     private favoriteService: FavoritesService,
     private userRecipesService: UserRecipesService,
-    private authService: AuthService
+    private authService: AuthService,
+    private messageService: MessageService
     ) {
       if(history.state['action'])
         this.action = history.state['action'];
@@ -34,6 +38,20 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.username = this.authService.token.Username;
     this.loadData();
+    if(this.action == 'added'){
+      this.messageService.add({
+        severity: 'success',
+        summary: 'Success',
+        detail: 'Added new recipe',
+      });
+    }
+    else if(this.action=='edited'){
+      this.messageService.add({
+        severity: 'success',
+        summary: 'Success',
+        detail: 'Updated recipe'
+      });
+    }
   }
 
   loadData(): void{
@@ -42,7 +60,7 @@ export class ProfileComponent implements OnInit {
       "favorites": this.favoriteService.getAll(),
       "usersRecipes": this.userRecipesService.getAll()
     }).subscribe({
-      next: data => {
+      next: (data:any) => {
         this.favoriteRecipes = data.favorites;
         this.usersRecipes = data.usersRecipes;
         this.hasFavorites = !!this.favoriteRecipes.length;
@@ -51,7 +69,7 @@ export class ProfileComponent implements OnInit {
         setTimeout(()=>this.isReady=true);
         SpinnerFunctions.hideSpinner();
       },
-      error: err =>{
+      error: (err:any) =>{
         SpinnerFunctions.hideSpinner();
         console.log(err);
       }

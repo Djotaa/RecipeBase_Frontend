@@ -32,12 +32,12 @@ export class LoginComponent implements OnInit {
     SpinnerFunctions.showSpinner();
 
     this.formService.submit().subscribe({
-      next: data => {
+      next: (data:any) => {
         this.authService.setToken(data.token);
         SpinnerFunctions.hideSpinner();
         this.router.navigateByUrl("/");
       },
-      error: err => {
+      error: (err:any) => {
         console.log(err)
         if(err.status == 401){
           this.errorMsg = "Wrong username and/or password.";

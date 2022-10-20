@@ -16,6 +16,9 @@ import { RegisterComponent } from './auth/components/register/register.component
 import { ProfileComponent } from './profile/profile/profile.component';
 import { AdminComponent } from './admin/admin/admin.component';
 
+import { RippleModule } from 'primeng/ripple';
+
+
 const routes: Routes = [
   {
     path: "",
@@ -90,7 +93,8 @@ const routes: Routes = [
     NgbModule,
     RouterModule.forRoot(routes),
     SharedModule,
-    LayoutModule
+    LayoutModule,
+    RippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

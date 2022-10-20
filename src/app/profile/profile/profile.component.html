@@ -1,3 +1,4 @@
+<p-toast></p-toast>
 <h1 class="text-center accent mt-4">{{username}}'s profile</h1>
 <button mat-raised-button class="btnAccent" routerLink="/recipes/recipe-form">Add new recipe</button>
 <div class="text-success pt-3" *ngIf="action">{{ action == "edited" ? "Recipe updated!" : "Recipe added!" }}</div>
@@ -6,7 +7,7 @@
     <div class="container">
         <div *ngIf="isReady" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
             <ng-container *ngIf="hasRecipes; else noRecipes">
-                <ng-container *ngFor="let recipe of usersRecipes | paginate : { itemsPerPage: 8, currentPage: p}">
+                <ng-container *ngFor="let recipe of usersRecipes | paginate : { itemsPerPage: 8, currentPage: p1, id: 'first'}">
                     <app-recipe [isProfilePage]="true" [recipe]="recipe"></app-recipe>
                 </ng-container>
             </ng-container>
@@ -15,7 +16,7 @@
             </ng-template>
         </div>
         <ng-container *ngIf="hasRecipes" >
-            <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+            <pagination-controls class="my-pagination" (pageChange)="p1 = $event" id="first"></pagination-controls>
         </ng-container>
     </div>
 </div>
@@ -27,7 +28,7 @@
     <div class="container">
         <div *ngIf="isReady" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
             <ng-container *ngIf="hasFavorites; else noRecipes">
-                <ng-container *ngFor="let recipe of favoriteRecipes | paginate : { itemsPerPage: 8, currentPage: p}">
+                <ng-container *ngFor="let recipe of favoriteRecipes | paginate : { itemsPerPage: 8, currentPage: p2, id: 'second'}">
                     <app-recipe [recipe]="recipe"></app-recipe>
                 </ng-container>
             </ng-container>
@@ -36,7 +37,7 @@
             </ng-template>
         </div>
         <ng-container *ngIf="hasFavorites" >
-            <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+            <pagination-controls class="my-pagination" (pageChange)="p2 = $event" id="second"></pagination-controls>
         </ng-container>
     </div>
 </div>

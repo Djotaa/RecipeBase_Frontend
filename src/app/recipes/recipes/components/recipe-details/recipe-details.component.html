@@ -11,7 +11,7 @@
                 <h3><span class="secondary-text">Prep time:</span> {{ recipe.prepTime }}</h3>
                 <h3><span class="secondary-text">Recipe group:</span> {{ recipe.category }}</h3>
                 <h3><span class="secondary-text">Posted on:</span> {{ recipe.createdAt | date }}</h3>
-                <mat-divider class="d-lg-none"></mat-divider>
+                <mat-divider ></mat-divider>
                 <h3 class="secondary-text">Ingredients:</h3>
                 <ul>
                     <li *ngFor="let ingredient of recipe.ingredients">
