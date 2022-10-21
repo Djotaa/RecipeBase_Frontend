@@ -3,7 +3,7 @@
         <h1 class="text-center accent mb-4">{{recipe.title}}</h1>
         <div class="row">
             <div class="col-12 col-lg-6 col-xl-5 p-2">
-                <img src="{{imageDir}}{{ recipe.image }}" alt="{{ recipe.title }}" class="img-fluid rounded" />
+                <img [src]="recipe.image" alt="{{ recipe.title }}" class="img-fluid rounded" />
             </div>
             <div class="col-12 col-lg-6 col-xl-5 p-2 ms-xl-5">
                 <app-favorite-button *ngIf="isLoggedIn" [recipeId]="recipe.id"></app-favorite-button>

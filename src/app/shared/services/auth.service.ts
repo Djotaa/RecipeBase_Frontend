@@ -20,7 +20,6 @@ export class AuthService {
   parseToken(token: string): void {
     try {
       this.token = JSON.parse(atob(token.split(".")[1]));
-      console.log(this.token);
     }
     catch(ex){
       console.log(ex);

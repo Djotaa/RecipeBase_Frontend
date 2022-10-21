@@ -7,11 +7,11 @@ export const links = {
         {
             title: "Contact",
             route: "/contact"
-        },
-        {
-            title: "Author",
-            route: "/author"
         }
+        // {
+        //     title: "Author",
+        //     route: "/author"
+        // }
     ],
     footer: [
         {

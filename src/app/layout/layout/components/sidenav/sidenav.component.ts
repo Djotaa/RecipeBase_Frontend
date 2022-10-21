@@ -1,5 +1,5 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent {
+export class SidenavComponent implements OnInit{
 
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
   menuLinks: any;
@@ -27,6 +27,8 @@ export class SidenavComponent {
   ngOnInit(){
     this.menuLinks = this.authService.token?.Username == "Admin" ? links.admin : links.menu;
   }
+
+  
   
 
   ngAfterViewInit(){

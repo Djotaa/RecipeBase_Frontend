@@ -232,12 +232,30 @@ export class AddRecipeFormComponent implements OnInit {
     console.log(err);
     if (err.error && err.error.message) {
       this.errorMsg = "An error has occurred: " + err.error.message;
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: this.errorMsg,
+        life: 3000
+      })
     }
     else if (err.error && err.error.errors) {
       this.errorMsg = err.error.errors.map((x: any) => x.error).join("<br/>");
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: this.errorMsg,
+        life: 3000
+      })
     }
     else {
       this.errorMsg = "An error has occurred. Try again later.";
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: this.errorMsg,
+        life: 3000
+      })
     }
   }
 

@@ -35,23 +35,32 @@ export class ProfileComponent implements OnInit {
         this.action = history.state['action'];
     }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
     this.username = this.authService.token.Username;
-    this.loadData();
+
     if(this.action == 'added'){
-      this.messageService.add({
-        severity: 'success',
-        summary: 'Success',
-        detail: 'Added new recipe',
+      this.action = '';
+      setTimeout(() => {
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Added',
+          detail: 'Recipe added',
+          life: 3000
+        }) 
       });
     }
-    else if(this.action=='edited'){
-      this.messageService.add({
-        severity: 'success',
-        summary: 'Success',
-        detail: 'Updated recipe'
+    else if(this.action =='edited'){
+      this.action = '';
+      setTimeout(() => {
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Updated',
+          detail: 'Recipe updated',
+          life: 3000
+        }) 
       });
     }
+    this.loadData();
   }
 
   loadData(): void{
@@ -73,6 +82,18 @@ export class ProfileComponent implements OnInit {
         SpinnerFunctions.hideSpinner();
         console.log(err);
       }
+    });
+  }
+
+  recipeDeleted(event: any){
+    this.loadData();
+    setTimeout(() => {
+      this.messageService.add({
+        severity: 'success',
+        summary: 'Deleted',
+        detail: 'Recipe deleted',
+        life: 3000
+      }) 
     });
   }
   

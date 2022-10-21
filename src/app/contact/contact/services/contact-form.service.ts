@@ -20,7 +20,7 @@ export class ContactFormService extends BaseFormService{
 
   public initializeForm(): void{
     this.form = new UntypedFormGroup({
-      fullName: new UntypedFormControl("", [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern(/^\p{Lu}[\s\p{L}]+$/u)]),
+      fullName: new UntypedFormControl("", [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern(/^\p{Lu}\p{Ll}{1,20}(\s\p{L}{2,20}){1,}$/u)]),
       email: new UntypedFormControl("", [Validators.email, Validators.required, Validators.maxLength(50)]),
       message: new UntypedFormControl("", [Validators.required, Validators.minLength(10), Validators.maxLength(200)])
     });

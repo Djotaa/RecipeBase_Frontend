@@ -48,7 +48,6 @@ export class RecipeGroupFormComponent implements OnInit {
 
   send(): void{
     if(this.isEdit){
-      console.log(this.form.value, this.groupId)
       SpinnerFunctions.showSpinner();
 
       this.recipeGroupSerivce.update(this.groupId, this.form.value).subscribe({
@@ -73,7 +72,6 @@ export class RecipeGroupFormComponent implements OnInit {
       
     }
     else{
-      console.log(this.form.value)
       SpinnerFunctions.showSpinner();
 
       this.recipeGroupSerivce.create(this.form.value).subscribe({

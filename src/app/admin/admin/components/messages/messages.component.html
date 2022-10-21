@@ -10,6 +10,8 @@
                     <p>Message: </p>
                     <p>{{m.message}}</p>
                     <p>Date received: {{m.createdAt | date}} </p>
+                    <!-- <button mat-raised-button class="btnAccent" (click)="deleteMessage(m.id)">Send</button> -->
+                    <button mat-raised-button class="btnSecondary" (click)="deleteMessage(m.id)">Delete</button>
                 </div>
             </ng-container>
         </ng-container>
@@ -19,3 +21,4 @@
         </ng-template>
     </div>
 </div>
+<p-toast></p-toast>

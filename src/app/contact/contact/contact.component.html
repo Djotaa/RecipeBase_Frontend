@@ -15,7 +15,7 @@
                                 Minimum 2 characters.
                             </ng-container>
                             <ng-container *ngIf="control.hasError('pattern')">
-                                Your name must begin with a capital letter, only letters and spaces are allowed.
+                                Full Name must start with a capital letter and have at least two words. Only letter and spaces are allowed.
                             </ng-container>
                         </mat-error>
                     </mat-form-field>
@@ -62,3 +62,4 @@
         </form>
     </div>
 </div>
+<p-toast></p-toast>

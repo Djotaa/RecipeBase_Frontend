@@ -36,10 +36,10 @@
                 </div>
                 <div class="col">
                     <button mat-raised-button class="btnAccent d-block mx-auto" [disabled]="formService.form.invalid" (click)="send()">Login</button>
-                    <div class="text-danger pt-3" *ngIf="errorMsg"> {{ errorMsg }}</div>
                     <div class="text-success pt-3" *ngIf="justRegistered">Successful registration. You can login.</div>
                 </div>
             </div>
         </form>
     </div>
 </div>
+<p-toast></p-toast>

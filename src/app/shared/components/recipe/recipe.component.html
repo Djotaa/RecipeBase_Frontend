@@ -2,8 +2,7 @@
     <div class="col recipe mb-1">
         <a routerLink="/recipes/{{recipe.id}}">
             <div class="position-relative overflow-hidden recipe-image">
-                <img src="{{imageDir}}{{recipe.image}}"
-                    class="img-fluid rounded">
+                <img [src]="recipe.image" class="img-fluid rounded">
                 <div class="position-absolute p-1 rounded recipe-title">{{recipe.title}}</div>
                 <div class="position-absolute p-1 rounded recipe-group text-white">{{recipe.category}}</div>
             </div>
