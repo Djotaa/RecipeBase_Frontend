@@ -78,10 +78,10 @@
                             <td>
                                 <p-cellEditor>
                                     <ng-template pTemplate="input">
-                                        <input type="text" pInputText [(ngModel)]="ingredient.item" required>
+                                        <input type="text" pInputText [(ngModel)]="ingredient.value" required>
                                     </ng-template>
                                     <ng-template pTemplate="output">
-                                        {{ ingredient.item }}
+                                        {{ ingredient.value }}
                                     </ng-template>
                                 </p-cellEditor>
                             </td>
@@ -93,7 +93,7 @@
                                     (click)="deleteIngredient(ri)"
                                     class="p-button-rounded p-button-danger p-button-text"></button>
                                 <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow
-                                    icon="pi pi-check" (click)="onRowEditSave(ingredient, ri)"
+                                    icon="pi pi-check" (click)="onRowEditSave(ingredient, ri, 'ingredient')"
                                     class="p-button-rounded p-button-text p-button-success p-mr-2"></button>
                                 <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow
                                     icon="pi pi-times" (click)="onRowEditCancel(ingredient, ri, 'ingredient')"
@@ -128,11 +128,11 @@
                             <td>
                                 <p-cellEditor>
                                     <ng-template pTemplate="input">
-                                        <textarea cols="30" rows="5" [(ngModel)]="direction.step" pInputTextarea
+                                        <textarea cols="30" rows="5" [(ngModel)]="direction.value" pInputTextarea
                                             [autoResize]="true"></textarea>
                                     </ng-template>
                                     <ng-template pTemplate="output">
-                                        {{ direction.step }}
+                                        {{ direction.value }}
                                     </ng-template>
                                 </p-cellEditor>
                             </td>
@@ -144,7 +144,7 @@
                                     (click)="deleteDirection(ri)"
                                     class="p-button-rounded p-button-danger p-button-text"></button>
                                 <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow
-                                    icon="pi pi-check" (click)="onRowEditSave(direction, ri)"
+                                    icon="pi pi-check" (click)="onRowEditSave(direction, ri, 'direction')"
                                     class="p-button-rounded p-button-text p-button-success p-mr-2"></button>
                                 <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow
                                     icon="pi pi-times" (click)="onRowEditCancel(direction, ri, 'direction')"

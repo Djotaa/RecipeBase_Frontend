@@ -7,14 +7,9 @@ import { RecipeGroupsApiService } from 'src/app/shared/services/recipe-groups-ap
 import { MessageService } from 'primeng/api';
 import { RecipesApiService } from 'src/app/shared/services/recipes-api.service';
 
-export interface Ingredient {
+export interface Element {
   id: string;
-  item: string;
-}
-
-export interface Direction {
-  id: string;
-  step: string;
+  value: string;
 }
 
 @Component({
@@ -29,16 +24,11 @@ export class AddRecipeFormComponent implements OnInit {
   isReady: boolean = true;
   filePath: string;
 
-  ingredients: Ingredient[];
+  ingredients: Element[];
 
-  ingredientsToSend: string[];
+  directions: Element[];
 
-  clonedIngredients: { [s: string]: Ingredient } = {};
-
-  directions: Direction[];
-
-  clonedDirections: { [s: string]: Direction } = {};
-
+  clonedElements: { [s: string]: Element } = {};
 
   recipeGroups: IRecipeGroup[];
 
@@ -73,8 +63,8 @@ export class AddRecipeFormComponent implements OnInit {
       }
     })
 
-    this.ingredients = this.isEdit ? [] : [{ id: this.generateId(), item: 'New ingredient' }]
-    this.directions = this.isEdit ? [] : [{ id: this.generateId(), step: 'Step 1' }]
+    this.ingredients = this.isEdit ? [] : [{ id: this.generateId(), value: 'New ingredient' }]
+    this.directions = this.isEdit ? [] : [{ id: this.generateId(), value: 'Step 1' }]
 
     if (this.isEdit)
       this.recipeService.get(this.recipeId).subscribe({
@@ -88,14 +78,14 @@ export class AddRecipeFormComponent implements OnInit {
           data.directions.map((x: string) => {
             this.directions.push({
               id: this.generateId(),
-              step: x
+              value: x
             })
           })
 
           data.ingredients.map((x: string) => {
             this.ingredients.push({
               id: this.generateId(),
-              item: x
+              value: x
             })
           })
         }
@@ -121,47 +111,66 @@ export class AddRecipeFormComponent implements OnInit {
     return text;
   }
 
-  onRowEditInit(element: any, type: string) {
+  onRowEditInit(element: Element, type: string) {
     if(type == 'ingredient'){
-      this.clonedIngredients[element.id] = { ...element };
+      this.clonedElements[element.id] = { ...element };
     }
     else{
-      this.clonedDirections[element.id] = { ...element };
+      this.clonedElements[element.id] = { ...element };
     }
   }
   
 
-  onRowEditSave(ingredient: Ingredient, index: number) {
-    if (ingredient.item.length > 3 && ingredient.item.length <= 50) {
-      delete this.clonedIngredients[ingredient.id];
-      this.messageService.add({
-        severity: 'success',
-        summary: 'Success',
-        detail: 'Ingredient is updated',
-      });
-    } else {
-      this.ingredients[index] = this.clonedIngredients[ingredient.id];
-      this.messageService.add({
-        severity: 'error',
-        summary: 'Error',
-        detail: 'Ingredient is required and must be between 3 and 50 characters.',
-      });
+  onRowEditSave(element: Element, index: number, type: string) {
+    if(type == "ingredient"){
+      if (element.value.length > 3 && element.value.length <= 50) {
+        delete this.clonedElements[element.id];
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Success',
+          detail: 'Ingredient is updated',
+        });
+      } else {
+        this.ingredients[index] = this.clonedElements[element.id];
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Error',
+          detail: 'Ingredient is required and must be between 3 and 50 characters.',
+        });
+      }
+    }
+    else{
+      if (element.value.length > 5) {
+        delete this.clonedElements[element.id];
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Success',
+          detail: 'Direction is updated',
+        });
+      } else {
+        this.directions[index] = this.clonedElements[element.id];
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Error',
+          detail: 'Direction is required and must be at least 5 characters.',
+        });
+      }
     }
   }
 
-  onRowEditCancel(element: Ingredient | Direction, index: number, type: string) {
+  onRowEditCancel(element: Element, index: number, type: string) {
     if (type == 'ingredient') {
-      this.ingredients[index] = this.clonedIngredients[element.id];
-      delete this.clonedIngredients[element.id];
+      this.ingredients[index] = this.clonedElements[element.id];
+      delete this.clonedElements[element.id];
     }
     else{
-      this.directions[index] = this.clonedDirections[element.id];
-    delete this.clonedDirections[element.id];
+      this.directions[index] = this.clonedElements[element.id];
+    delete this.clonedElements[element.id];
     }
   }
 
   addIngredient() {
-    this.ingredients.push({ id: this.generateId(), item: 'New ingredient' });
+    this.ingredients.push({ id: this.generateId(), value: 'New ingredient' });
   }
 
   deleteIngredient(index: number) {
@@ -170,7 +179,7 @@ export class AddRecipeFormComponent implements OnInit {
   }
 
   addDirection() {
-    this.directions.push({ id: this.generateId(), step: 'New step' });
+    this.directions.push({ id: this.generateId(), value: 'New step' });
   }
 
 
@@ -190,9 +199,9 @@ export class AddRecipeFormComponent implements OnInit {
     if (!this.isEdit || (this.isEdit && this.fileInput.nativeElement.files.length))
       formData.append("image", this.fileInput.nativeElement.files[0]);
 
-    this.ingredients.forEach(x => formData.append("ingredients[]", String(x.item)));
+    this.ingredients.forEach(x => formData.append("ingredients[]", String(x.value)));
 
-    this.directions.forEach(x => formData.append("directions[]", String(x.step)));
+    this.directions.forEach(x => formData.append("directions[]", String(x.value)));
 
     SpinnerFunctions.showSpinner();
 
