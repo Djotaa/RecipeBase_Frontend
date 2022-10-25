@@ -6,6 +6,7 @@ import { UserRecipesService } from './services/user-recipes.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { SpinnerFunctions } from 'src/app/shared/classes/spinner-functions';
 import { MessageService } from 'primeng/api'
+import { UsersApiService } from '../../shared/services/users-api.service';
 
 @Component({
   selector: 'app-profile',
@@ -24,27 +25,27 @@ export class ProfileComponent implements OnInit {
   hasFavorites: boolean;
   hasRecipes: boolean;
   action: any;
+  displayProfileDialog: boolean = false;
 
   constructor(
     private favoriteService: FavoritesService,
     private userRecipesService: UserRecipesService,
     private authService: AuthService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private userService: UsersApiService
     ) {
       if(history.state['action'])
         this.action = history.state['action'];
     }
 
-  ngOnInit(): void {    
-    this.username = this.authService.token.Username;
-
+  ngOnInit(): void {
     if(this.action == 'added'){
       this.action = '';
       setTimeout(() => {
         this.messageService.add({
           severity: 'success',
-          summary: 'Added',
-          detail: 'Recipe added',
+          summary: 'Added recipe',
+          detail: 'Recipe successfully added',
           life: 3000
         }) 
       });
@@ -54,8 +55,8 @@ export class ProfileComponent implements OnInit {
       setTimeout(() => {
         this.messageService.add({
           severity: 'success',
-          summary: 'Updated',
-          detail: 'Recipe updated',
+          summary: 'Updated recipe',
+          detail: 'Recipe successfully updated',
           life: 3000
         }) 
       });
@@ -67,13 +68,15 @@ export class ProfileComponent implements OnInit {
     SpinnerFunctions.showSpinner();
     forkJoin({
       "favorites": this.favoriteService.getAll(),
-      "usersRecipes": this.userRecipesService.getAll()
+      "usersRecipes": this.userRecipesService.getAll(),
+      "user": this.userService.get(this.authService.token.UserId)
     }).subscribe({
       next: (data:any) => {
         this.favoriteRecipes = data.favorites;
         this.usersRecipes = data.usersRecipes;
         this.hasFavorites = !!this.favoriteRecipes.length;
         this.hasRecipes = !!this.usersRecipes.length;
+        this.username = data.user.username;
 
         setTimeout(()=>this.isReady=true);
         SpinnerFunctions.hideSpinner();
@@ -90,11 +93,32 @@ export class ProfileComponent implements OnInit {
     setTimeout(() => {
       this.messageService.add({
         severity: 'success',
-        summary: 'Deleted',
-        detail: 'Recipe deleted',
+        summary: 'Deleted recipe',
+        detail: 'Recipe successfully deleted',
         life: 3000
       }) 
     });
+  }
+
+  profileUpdated(event: any){
+    this.loadData();
+    this.displayProfileDialog = false;
+    setTimeout(() => {
+      this.messageService.add({
+        severity: 'success',
+        summary: 'Updated profile',
+        detail: 'Profile successfully updated',
+        life: 3000
+      }) 
+    });
+  }
+
+  openProfileDialog(){
+    this.displayProfileDialog = true;
+  }
+
+  closeProfileDialog(){
+    this.displayProfileDialog = false;
   }
   
 }

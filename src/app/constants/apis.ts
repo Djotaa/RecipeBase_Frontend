@@ -6,5 +6,6 @@ export const APIS = {
     FAVORITES: "favorites",
     USER_RECIPES: "recipe/userrecipes",
     REGISTER: "register",
-    CONTACT: "message"
+    CONTACT: "message",
+    USERS: "user"
 }

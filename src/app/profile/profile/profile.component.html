@@ -1,7 +1,8 @@
-<h1 class="text-center accent mt-4">{{username}}'s profile</h1>
-<button mat-raised-button class="btnAccent" routerLink="/recipes/recipe-form">Add new recipe</button>
+<button mat-raised-button class="btnAccent" (click)="openProfileDialog()">Edit profile</button>
+<h1 class="text-center accent mt-4 inline-block">{{username}}'s profile</h1>
 <div class="text-success pt-3" *ngIf="action">{{ action == "edited" ? "Recipe updated!" : "Recipe added!" }}</div>
 <h2 class="accent mt-1">My recipes</h2>
+<button mat-raised-button class="btnAccent" routerLink="/recipes/recipe-form">Add new recipe</button>
 <div class="col-12 col-xl-10 mx-auto min-vh-50">
     <div class="container">
         <div *ngIf="isReady" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
@@ -41,3 +42,6 @@
     </div>
 </div>
 <p-toast></p-toast>
+<p-dialog header="Update profile" [(visible)]="displayProfileDialog" [style]="{width: '50vw'}" (onHide)="closeProfileDialog()">
+    <app-update-profile-form *ngIf="displayProfileDialog" (updatedProfile)="profileUpdated($event)"></app-update-profile-form>
+</p-dialog>

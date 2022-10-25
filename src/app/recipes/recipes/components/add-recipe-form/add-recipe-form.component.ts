@@ -21,7 +21,6 @@ export interface Element {
 export class AddRecipeFormComponent implements OnInit {
 
   form: FormGroup;
-  isReady: boolean = true;
   filePath: string;
 
   ingredients: Element[];

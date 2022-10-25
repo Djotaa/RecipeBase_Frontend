@@ -20,7 +20,7 @@ export class RegisterFormService extends BaseFormService{
 
     this.form = new FormGroup({
       fullName: new FormControl("", [Validators.required, Validators.minLength(3), Validators.pattern(/^\p{Lu}\p{Ll}{1,20}(\s\p{L}{2,20}){1,}$/u)]),
-      username: new FormControl("", [Validators.required, Validators.minLength(3), Validators.pattern(/^\p{L}[\d\p{L}]*$/u)]),
+      username: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern(/^\p{L}[\d\p{L}]*$/u)]),
       email: new FormControl("", [Validators.email, Validators.required]),
       password: new FormControl("", [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)])
     });
