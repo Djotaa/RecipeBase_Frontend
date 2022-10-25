@@ -1,10 +1,10 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CONFIG } from 'src/app/constants/config';
 import { SpinnerFunctions } from 'src/app/shared/classes/spinner-functions';
 import { IRecipe } from 'src/app/shared/interfaces/i-recipe';
-import { AuthService } from 'src/app/shared/services/auth.service';
 import { RecipesApiService } from 'src/app/shared/services/recipes-api.service';
 
 @Component({
@@ -23,7 +23,8 @@ export class RecipeDetailsComponent implements OnInit {
     private recipeApiService: RecipesApiService,
     private activatedRoute: ActivatedRoute,
     private title: Title,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -56,4 +57,7 @@ export class RecipeDetailsComponent implements OnInit {
     });
   }
 
+  returnToPreviousPage(){
+    this.location.back();
+  }
 }

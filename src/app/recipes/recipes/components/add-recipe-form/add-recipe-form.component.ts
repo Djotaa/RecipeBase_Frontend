@@ -6,6 +6,7 @@ import { IRecipeGroup } from 'src/app/shared/interfaces/i-recipe-group';
 import { RecipeGroupsApiService } from 'src/app/shared/services/recipe-groups-api.service';
 import { MessageService } from 'primeng/api';
 import { RecipesApiService } from 'src/app/shared/services/recipes-api.service';
+import { Location } from '@angular/common';
 
 export interface Element {
   id: string;
@@ -45,7 +46,8 @@ export class AddRecipeFormComponent implements OnInit {
     private recipeGroupSerivce: RecipeGroupsApiService,
     private recipeService: RecipesApiService,
     private router: Router,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private location: Location
   ) { }
 
 
@@ -186,8 +188,6 @@ export class AddRecipeFormComponent implements OnInit {
     this.directions.splice(index, 1);
   }
 
-
-
   send(): void {
     let formData = new FormData()
     formData.append("title", this.form.get("title").value);
@@ -259,6 +259,6 @@ export class AddRecipeFormComponent implements OnInit {
   }
 
   returnToPreviousPage(){
-    this.router.navigateByUrl("/profile");
+    this.location.back();
   }
 }
