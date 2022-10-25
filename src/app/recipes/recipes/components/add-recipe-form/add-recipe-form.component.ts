@@ -258,7 +258,7 @@ export class AddRecipeFormComponent implements OnInit {
     }
   }
 
-  // this.router.navigateByUrl("/profile", { state: { action: 'edited' } });
-
-
+  returnToPreviousPage(){
+    this.router.navigateByUrl("/profile");
+  }
 }
