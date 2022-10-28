@@ -5,7 +5,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CONFIG } from 'src/app/constants/config';
 import { SpinnerFunctions } from 'src/app/shared/classes/spinner-functions';
 import { IRecipe } from 'src/app/shared/interfaces/i-recipe';
-import { AuthService } from 'src/app/shared/services/auth.service';
 import { RecipesApiService } from 'src/app/shared/services/recipes-api.service';
 
 @Component({

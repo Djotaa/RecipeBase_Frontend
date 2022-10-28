@@ -188,8 +188,6 @@ export class AddRecipeFormComponent implements OnInit {
     this.directions.splice(index, 1);
   }
 
-
-
   send(): void {
     let formData = new FormData()
     formData.append("title", this.form.get("title").value);

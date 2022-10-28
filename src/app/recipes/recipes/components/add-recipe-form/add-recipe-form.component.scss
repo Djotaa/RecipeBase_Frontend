@@ -21,7 +21,7 @@ mat-form-field.mat-form-field{
    background-color: #f7a111!important;
 }
 
-.imageInput:focus{
+.imageInput:focus, .p-inputtext:enabled:focus{
     border: 1px #f7a111 solid!important;
     box-shadow: 0 0 0 0.25rem rgb(247 161 17 / 25%);
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="my-5">
     <button mat-raised-button class="btnAccent" (click)="openProfileDialog()">Edit profile</button>
     <h1 class="text-center accent mt-4 inline-block">{{username}}'s profile</h1>
@@ -5,8 +6,19 @@
 <div class="text-success pt-3" *ngIf="action">{{ action == "edited" ? "Recipe updated!" : "Recipe added!" }}</div>
 <h2 class="accent mt-1">My recipes</h2>
 <button mat-raised-button class="btnAccent" routerLink="/recipes/recipe-form">Add new recipe</button>
+=======
+<div class="my-5 d-flex">
+    <button pButton pRipple type="button" icon="pi pi-pencil" label="Edit profile" class="p-button-outlined p-button-warning" (click)="openProfileDialog()"></button>
+    <h1 class="text-center accent mx-auto">{{username}}'s profile</h1>
+</div>
+<div class="mt-1 d-flex">
+    <h2 class="accent">My recipes</h2>
+    <button mat-raised-button class="btnAccent ms-3"  routerLink="/recipes/recipe-form"><mat-icon>add</mat-icon>Add recipe</button>
+    <!-- <button  pButton pRipple type="button" icon="pi pi-plus" label="Add recipe" class="p-button-rounded p-button-warning ms-3 text-white" routerLink="/recipes/recipe-form"></button> -->
+</div>
+>>>>>>> ba18db4331fb35bf60c8835ef660b3e3430d0526
 <div class="col-12 col-xl-10 mx-auto min-vh-50">
-    <div class="container">
+    <div class="container pt-2">
         <div *ngIf="isReady" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
             <ng-container *ngIf="hasRecipes; else noRecipes">
                 <ng-container *ngFor="let recipe of usersRecipes | paginate : { itemsPerPage: 8, currentPage: p1, id: 'first'}">
@@ -14,7 +26,7 @@
                 </ng-container>
             </ng-container>
             <ng-template #noRecipes>
-                <div class="w-100"><h2 class="secondary-text">You don't have any recipes yet.</h2></div>
+                <div class="w-100 mt-3"><h2 class="secondary-text">You don't have any recipes yet.</h2></div>
             </ng-template>
         </div>
         <ng-container *ngIf="hasRecipes" >
@@ -35,7 +47,7 @@
                 </ng-container>
             </ng-container>
             <ng-template #noRecipes>
-                <div class="w-100"><h2 class="secondary-text">You don't have any favorites.</h2></div>
+                <div class="w-100 mt-3"><h2 class="secondary-text">You don't have any favorites.</h2></div>
             </ng-template>
         </div>
         <ng-container *ngIf="hasFavorites" >
@@ -44,6 +56,6 @@
     </div>
 </div>
 <p-toast></p-toast>
-<p-dialog header="Update profile" [(visible)]="displayProfileDialog" [style]="{width: '50vw'}" (onHide)="closeProfileDialog()">
+<p-dialog header="Update profile" [(visible)]="displayProfileDialog" (onHide)="closeProfileDialog()" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}" [baseZIndex]="15">
     <app-update-profile-form *ngIf="displayProfileDialog" (updatedProfile)="profileUpdated($event)"></app-update-profile-form>
 </p-dialog>
