@@ -1,5 +1,7 @@
-<button mat-raised-button class="btnAccent" (click)="openProfileDialog()">Edit profile</button>
-<h1 class="text-center accent mt-4 inline-block">{{username}}'s profile</h1>
+<div class="my-5">
+    <button mat-raised-button class="btnAccent" (click)="openProfileDialog()">Edit profile</button>
+    <h1 class="text-center accent mt-4 inline-block">{{username}}'s profile</h1>
+</div>
 <div class="text-success pt-3" *ngIf="action">{{ action == "edited" ? "Recipe updated!" : "Recipe added!" }}</div>
 <h2 class="accent mt-1">My recipes</h2>
 <button mat-raised-button class="btnAccent" routerLink="/recipes/recipe-form">Add new recipe</button>

@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -23,7 +24,8 @@ export class RecipeDetailsComponent implements OnInit {
     private recipeApiService: RecipesApiService,
     private activatedRoute: ActivatedRoute,
     private title: Title,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -56,4 +58,7 @@ export class RecipeDetailsComponent implements OnInit {
     });
   }
 
+  returnToPreviousPage(){
+    this.location.back();
+  }
 }
