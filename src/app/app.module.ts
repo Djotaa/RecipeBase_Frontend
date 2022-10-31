@@ -17,6 +17,9 @@ import { ProfileComponent } from './profile/profile/profile.component';
 import { AdminComponent } from './admin/admin/admin.component';
 
 import { RippleModule } from 'primeng/ripple';
+import { AuthGuard } from './shared/guards/auth.guard';
+import { AdminGuard } from './shared/guards/admin.guard';
+import { LoggedInGuard } from './shared/guards/logged-in.guard';
 
 
 const routes: Routes = [
@@ -48,24 +51,28 @@ const routes: Routes = [
         path: "login",
         loadChildren: () => import("./auth/auth.module").then(m=>m.AuthModule),
         component: LoginComponent,
-        data: {title: "Login"}
+        data: {title: "Login"},
+        canActivate: [LoggedInGuard]
       },
       {
         path: "register",
         component: RegisterComponent,
-        data: {title: "Register"}
+        data: {title: "Register"},
+        canActivate: [LoggedInGuard]
       },
       {
         path: "profile",
         loadChildren: () => import("./profile/profile.module").then(m=>m.ProfileModule),
         component: ProfileComponent,
-        data: {title: "Profile"}
+        data: {title: "Profile"},
+        canActivate: [AuthGuard]
       },
       {
         path: "admin",
         loadChildren: () => import("./admin/admin.module").then(m => m.AdminModule),
         component: AdminComponent,
-        data: {title: "Admin"}
+        data: {title: "Admin"},
+        canActivate: [AuthGuard, AdminGuard]
       },
       {
         path: "404",
@@ -96,7 +103,7 @@ const routes: Routes = [
     LayoutModule,
     RippleModule
   ],
-  providers: [],
+  providers: [AuthGuard, AdminGuard, LoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

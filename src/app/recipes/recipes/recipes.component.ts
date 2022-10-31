@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormArray, UntypedFormControl } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 import { forkJoin } from 'rxjs';
 import { SpinnerFunctions } from 'src/app/shared/classes/spinner-functions';
 import { IRecipeBlock } from 'src/app/shared/interfaces/i-recipe';
@@ -11,15 +12,20 @@ import { FilterFormService } from './services/filter-form.service';
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.scss']
+  styleUrls: ['./recipes.component.scss'],
+  providers: [MessageService]
 })
 export class RecipesComponent implements OnInit {
 
   constructor(
     private recipesApiService: RecipesApiService,
     private recipeGroupApiService: RecipeGroupsApiService,
-    public filterFormService: FilterFormService
-    ) { }
+    public filterFormService: FilterFormService,
+    private messageService: MessageService
+    ) { 
+      if(history.state['action'])
+        this.action = history.state['action'];
+    }
 
   recipes: IRecipeBlock[];
   recipeGroups: IRecipeGroup[];
@@ -27,6 +33,7 @@ export class RecipesComponent implements OnInit {
   hasAnyFilteredRecipes: boolean;
   p: number = 1;
   isReady: boolean = false;
+  action: any;
 
   ngOnInit(): void {
     SpinnerFunctions.showSpinner();
@@ -53,6 +60,40 @@ export class RecipesComponent implements OnInit {
         console.log(err)
       }
     })
+
+    if(this.action == 'noAuth'){
+      this.action = '';
+      setTimeout(() => {
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Not authorized',
+          detail: 'You need to be logged in to visit that page.',
+          life: 3000
+        }) 
+      });
+    }
+    else if(this.action == 'notAdmin'){
+      this.action = '';
+      setTimeout(() => {
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Not admin',
+          detail: 'You need to be the administrator to visit that page.',
+          life: 3000
+        }) 
+      });
+    }
+    else if(this.action == 'loggedIn'){
+      this.action = '';
+      setTimeout(() => {
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Already logged in',
+          detail: "You can't visit register and login pages when you are logged in.",
+          life: 3000
+        }) 
+      });
+    }
 
 
     

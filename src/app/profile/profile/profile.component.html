@@ -1,4 +1,3 @@
-
 <div class="my-5 d-flex">
     <button pButton pRipple type="button" icon="pi pi-pencil" label="Edit profile" class="p-button-outlined p-button-warning" (click)="openProfileDialog()"></button>
     <h1 class="text-center accent mx-auto">{{username}}'s profile</h1>
@@ -46,6 +45,6 @@
     </div>
 </div>
 <p-toast></p-toast>
-<p-dialog header="Update profile" [(visible)]="displayProfileDialog" (onHide)="closeProfileDialog()" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}" [baseZIndex]="15">
+<p-dialog header="Update profile" [(visible)]="displayProfileDialog" (onHide)="closeProfileDialog()" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}" [draggable]="false">
     <app-update-profile-form *ngIf="displayProfileDialog" (updatedProfile)="profileUpdated($event)"></app-update-profile-form>
 </p-dialog>

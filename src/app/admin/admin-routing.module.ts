@@ -9,6 +9,7 @@ const routes: Routes = [
     path: "",
     pathMatch: "full",
     redirectTo: "messages"
+
   },
   {
     path: "messages",
