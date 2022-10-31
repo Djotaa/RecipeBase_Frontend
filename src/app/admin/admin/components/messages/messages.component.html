@@ -3,7 +3,7 @@
     <div class="row my-3 justify-content-center">
         <ng-container *ngIf="hasMessages; else noMessages">
             <ng-container *ngFor="let m of messages">
-                <div class="col-8 border m-2 mx-auto">
+                <div class="col-8 border m-2 mx-auto pb-2">
                     <h2>User message</h2>
                     <p>Sent by: {{m.fullName}}</p>
                     <p>Email: {{m.email}}</p>
