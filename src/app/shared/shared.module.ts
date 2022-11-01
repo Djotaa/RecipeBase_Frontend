@@ -16,6 +16,7 @@ import {DialogModule} from 'primeng/dialog';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import {ConfirmPopupModule} from 'primeng/confirmpopup';
 
 
 
@@ -40,7 +41,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     DialogModule,
     InputNumberModule,
     ConfirmDialogModule,
-    InputTextareaModule
+    InputTextareaModule,
+    ConfirmPopupModule
   ],
   exports: [
     HttpClientModule,
@@ -57,7 +59,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     DialogModule,
     InputNumberModule,
     ConfirmDialogModule,
-    InputTextareaModule
+    InputTextareaModule,
+    ConfirmPopupModule
   ]
 })
 export class SharedModule { }

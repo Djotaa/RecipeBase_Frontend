@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { IRecipeGroup } from 'src/app/shared/interfaces/i-recipe-group';
 import { RecipeGroupsApiService } from 'src/app/shared/services/recipe-groups-api.service';
-import { MessageService } from 'primeng/api';
+import { MessageService, ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-recipe-groups',
   templateUrl: './recipe-groups.component.html',
   styleUrls: ['./recipe-groups.component.scss'],
-  providers: [MessageService]
+  providers: [MessageService, ConfirmationService]
 })
 export class RecipeGroupsComponent implements OnInit {
 
@@ -16,7 +16,8 @@ export class RecipeGroupsComponent implements OnInit {
 
   constructor(
     private recipeGroupService: RecipeGroupsApiService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private confirmationService: ConfirmationService
   ) { 
     if(history.state['action'])
         this.action = history.state['action'];
@@ -59,30 +60,51 @@ export class RecipeGroupsComponent implements OnInit {
   }
 
   deleteGroup(id: number | string): void{
-    this.recipeGroupService.delete(id).subscribe({
-      next: data =>{
-        this.loadData();
-        setTimeout(() => {
-          this.messageService.add({
-            severity: 'success',
-            summary: 'Deleted',
-            detail: 'Recipe group deleted',
-            life: 3000
-          }) 
-        });
-      },
-      error: err =>{
-        console.log(err);
-        setTimeout(() => {
-          this.messageService.add({
-            severity: 'error',
-            summary: 'Error',
-            detail: 'Error deleting recipe group. Try again later.',
-            life: 3000
-          }) 
-        });
+    this.confirmationService.confirm({
+      target: event.target,
+      message: 'Are you sure that you want to delete recipe group?',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        this.recipeGroupService.delete(id).subscribe({
+          next: data =>{
+            this.loadData();
+            setTimeout(() => {
+              this.messageService.add({
+                severity: 'success',
+                summary: 'Deleted',
+                detail: 'Recipe group deleted',
+                life: 3000
+              }) 
+            });
+          },
+          error: err =>{
+            console.log(err);
+            if(err.status == 409){
+              setTimeout(() => {
+                this.messageService.add({
+                  severity: 'error',
+                  summary: 'Error',
+                  detail: "Can't delete group because it has recipes.",
+                  life: 3000
+                }) 
+              });
+            }
+            else{
+              setTimeout(() => {
+                this.messageService.add({
+                  severity: 'error',
+                  summary: 'Error',
+                  detail: 'Error deleting recipe group. Try again later.',
+                  life: 3000
+                }) 
+              });
+            }
+          }
+        })
       }
-    })
+  });
+
+    
   }
 
 
